@@ -1968,7 +1968,14 @@
                 lastName = nameParts.slice(1).join(' ');
             }
 
-            // 1. Facebook Advanced Matching & Lead Event
+            // Generate unique event ID for Meta deduplication (browser + server)
+            const eventId = 'lead_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+
+            // Extract Meta cookies for server-side matching
+            const fbp = document.cookie.split(';').map(c => c.trim()).find(c => c.startsWith('_fbp='))?.split('=')[1] || '';
+            const fbc = document.cookie.split(';').map(c => c.trim()).find(c => c.startsWith('_fbc='))?.split('=')[1] || '';
+
+            // 1. Facebook Browser Pixel — Advanced Matching & Lead Event
             if (typeof fbq === 'function') {
                 fbq('init', '897644829617517', {
                     em: email.trim().toLowerCase(),
@@ -1981,7 +1988,23 @@
                     content_category: specialty,
                     pain_point: pain,
                     revenue_tier: revenue
-                });
+                }, { eventID: eventId }); // eventID for deduplication with CAPI
+            }
+
+            // 1b. Facebook Conversions API (server-side) — sends same Lead event
+            try {
+                fetch('/api/capi-event', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        email, phone, firstName, lastName,
+                        specialty, pain, revenue, eventId,
+                        sourceUrl: window.location.href,
+                        fbp, fbc
+                    })
+                }).catch(err => console.error('CAPI call failed:', err));
+            } catch (err) {
+                console.error('CAPI call failed:', err);
             }
 
             // 2. Submit to HubSpot API
