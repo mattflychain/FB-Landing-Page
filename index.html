@@ -661,11 +661,82 @@ function selectOpt(btn) {
     }, 350);
 }
 
-document.getElementById('demo-form').addEventListener('submit', e => {
+document.getElementById('demo-form').addEventListener('submit', async e => {
     e.preventDefault();
-    // Build URL with quiz + form data
     const form = e.target;
-    const params = new URLSearchParams(new FormData(form));
+    const formData = new FormData(form);
+    const params = new URLSearchParams(formData);
+
+    const submitBtn = form.querySelector('.cta-btn');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Booking...';
+    submitBtn.style.pointerEvents = 'none';
+
+    // Extract fields
+    const email = formData.get('email') || '';
+    const phone = formData.get('phone') || '';
+    const fullName = formData.get('name') || '';
+    const specialty = formData.get('specialty') || '';
+    const pain = formData.get('pain') || '';
+
+    // Split Name
+    let firstName = fullName;
+    let lastName = '';
+    const nameParts = fullName.trim().split(' ');
+    if (nameParts.length > 1) {
+        firstName = nameParts[0];
+        lastName = nameParts.slice(1).join(' ');
+    }
+
+    // 1. Facebook Advanced Matching & Lead Event
+    if (typeof fbq === 'function') {
+        fbq('init', '897644829617517', {
+            em: email.trim().toLowerCase(),
+            ph: phone.replace(/\\D/g, ''),
+            fn: firstName.trim().toLowerCase(),
+            ln: lastName.trim().toLowerCase()
+        });
+        fbq('track', 'Lead', {
+            content_name: 'Quiz Form Completed',
+            content_category: specialty,
+            pain_point: pain
+        });
+    }
+
+    // 2. Submit to HubSpot API
+    // IMPORTANT: Replace these two strings with your actual HubSpot Portal ID & Form GUID
+    const HUBSPOT_PORTAL_ID = 'YOUR_PORTAL_ID_HERE'; 
+    const HUBSPOT_FORM_GUID = 'YOUR_FORM_GUID_HERE';
+
+    if (HUBSPOT_PORTAL_ID && HUBSPOT_PORTAL_ID !== 'YOUR_PORTAL_ID_HERE') {
+        try {
+            await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_GUID}`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    fields: [
+                        { name: 'email', value: email },
+                        { name: 'firstname', value: firstName },
+                        { name: 'lastname', value: lastName },
+                        { name: 'phone', value: phone },
+                        { name: 'specialty', value: specialty },
+                        { name: 'pain_point', value: pain }
+                    ],
+                    context: {
+                        pageUri: window.location.href,
+                        pageName: document.title
+                    }
+                })
+            });
+        } catch (error) {
+            console.error('HubSpot submission failed', error);
+        }
+    } else {
+        // Small artificial delay if skipping Hubspot so the FB event has time to fire
+        await new Promise(r => setTimeout(r, 200));
+    }
+
+    // 3. Redirect back to standard contact page with parameters intact
     window.location.href = 'https://flychain.us/contact?' + params.toString();
 });
 </script>  
