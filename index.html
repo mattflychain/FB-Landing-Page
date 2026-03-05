@@ -1,744 +1,2036 @@
-<!DOCTYPE html>  
-<html lang="en">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Flychain | Book a Demo — Bookkeeping, AI CFO & Cash Flow Tools for Healthcare</title>  
-    <meta name="description" content="Flychain replaces QuickBooks, your general bookkeeper, and your spreadsheets with one platform built for healthcare. Book a free demo.">  
-    <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','897644829617517');fbq('track','PageView');</script>  
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=897644829617517&ev=PageView&noscript=1"/></noscript>  
-    <link rel="preconnect" href="https://fonts.googleapis.com">  
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flychain | Book a Demo — Bookkeeping, AI CFO & Cash Flow Tools for Healthcare</title>
+    <meta name="description"
+        content="Flychain replaces QuickBooks, your general bookkeeper, and your spreadsheets with one platform built for healthcare. Book a free demo.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph / Meta Tags for optimal Facebook/Social link sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://flychain.us/">
+    <meta property="og:title" content="Flychain | Book a Demo for Healthcare">
+    <meta property="og:description"
+        content="Flychain replaces QuickBooks, your general bookkeeper, and your spreadsheets with one platform built for healthcare.">
+    <meta property="og:image" content="https://flychain.us/assets/og-image.jpg">
+    <!-- Replace with actual OG image URL -->
+
+    <script>!function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s) }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '897644829617517'); fbq('track', 'PageView');</script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=897644829617517&ev=PageView&noscript=1" /></noscript>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- FIX 1: Brand-correct fonts — Manrope for headlines, Barlow for body -->
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">  
-    <style>  
-        :root {  
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
             /* Core Palette — matches Brand Guidelines v02 Feb 2026 */
-            --fc-white: #FFFFFF;  
-            --fc-midnight: #110823;  
-            --fc-grad-1: #5F58FF;  
-            --fc-grad-2: #8D58FF;  
-            --fc-violet: #B3ADFC;  
-            --fc-sand: #F3EAE3;  
+            --fc-white: #FFFFFF;
+            --fc-midnight: #110823;
+            --fc-grad-1: #5F58FF;
+            --fc-grad-2: #8D58FF;
+            --fc-violet: #B3ADFC;
+            --fc-sand: #F3EAE3;
             /* FIX 2: Viridian corrected from #0F9B7A to #0F8B7A */
-            --fc-viridian: #0F8B7A;  
-            --fc-tangerine: #FFA348;  
-            --fc-guava: #FF9887;  
+            --fc-viridian: #0F8B7A;
+            --fc-tangerine: #FFA348;
+            --fc-guava: #FF9887;
             /* FIX 4: Neutrals now from brand guideline Midnight/Sand tint spectrum */
-            --fc-gray-100: #f9f4f1;  
-            --fc-gray-200: #e9e8eb;  
+            --fc-gray-100: #f9f4f1;
+            --fc-gray-200: #e9e8eb;
             --fc-gray-300: #d3d2d7;
-            --fc-gray-500: #bebbc3;  
-            --fc-gray-600: #3c344b;  
-            --fc-text: #110823;  
-            --radius: 12px;  
+            --fc-gray-500: #bebbc3;
+            --fc-gray-600: #3c344b;
+            --fc-text: #110823;
+            --radius: 12px;
             /* Font families — brand guideline compliant */
             --font-headline: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
             --font-body: 'Barlow', -apple-system, BlinkMacSystemFont, sans-serif;
-        }  
-        *{margin:0;padding:0;box-sizing:border-box}  
-        html{scroll-behavior:smooth}  
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
         /* FIX 1: Body uses Barlow (body typeface) */
-        body{font-family:var(--font-body);color:var(--fc-text);background:var(--fc-white);-webkit-font-smoothing:antialiased;overflow-x:hidden}  
-  
-        /* NAV */  
-        .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--fc-gray-200);transition:box-shadow .3s}  
-        .nav.scrolled{box-shadow:0 2px 16px rgba(17,8,35,.06)}  
-        .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;max-width:1120px;margin:0 auto}  
-        .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}  
-        .nav-logo-icon{width:32px;height:32px;background:linear-gradient(135deg,var(--fc-grad-1),var(--fc-grad-2));border-radius:8px;display:flex;align-items:center;justify-content:center}  
-        .nav-logo-icon svg{width:18px;height:18px}  
+        body {
+            font-family: var(--font-body);
+            color: var(--fc-text);
+            background: var(--fc-white);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden
+        }
+
+        /* NAV */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, .95);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--fc-gray-200);
+            transition: box-shadow .3s
+        }
+
+        .nav.scrolled {
+            box-shadow: 0 2px 16px rgba(17, 8, 35, .06)
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 24px;
+            max-width: 1120px;
+            margin: 0 auto
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none
+        }
+
+        .nav-logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--fc-grad-1), var(--fc-grad-2));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .nav-logo-icon svg {
+            width: 18px;
+            height: 18px
+        }
+
         /* FIX 1: Nav logo text uses Manrope (headline typeface) */
-        .nav-logo-text{font-family:var(--font-headline);font-size:20px;font-weight:800;color:var(--fc-midnight);letter-spacing:-.3px}  
-        .nav-cta{font-family:var(--font-headline);background:linear-gradient(135deg,var(--fc-grad-1),var(--fc-grad-2));color:#fff;font-weight:600;font-size:13px;padding:9px 18px;border-radius:8px;text-decoration:none;transition:all .2s;box-shadow:0 2px 8px rgba(95,88,255,.2)}  
-        .nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(95,88,255,.3)}  
-  
-        /* HERO */  
-        .hero{padding:120px 0 72px;background:var(--fc-midnight);position:relative;overflow:hidden}  
-        .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 0%,rgba(95,88,255,.14) 0%,transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(141,88,255,.07) 0%,transparent 40%)}  
-        .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(179,173,252,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(179,173,252,.025) 1px,transparent 1px);background-size:48px 48px}  
-        .hero .container{position:relative;z-index:2}  
-        .hero-layout{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}  
-        @media(max-width:900px){.hero-layout{grid-template-columns:1fr;gap:32px}}  
-        .container{max-width:1120px;margin:0 auto;padding:0 24px}  
+        .nav-logo-text {
+            font-family: var(--font-headline);
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--fc-midnight);
+            letter-spacing: -.3px
+        }
+
+        .nav-cta {
+            font-family: var(--font-headline);
+            background: linear-gradient(135deg, var(--fc-grad-1), var(--fc-grad-2));
+            color: #fff;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 9px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all .2s;
+            box-shadow: 0 2px 8px rgba(95, 88, 255, .2)
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 14px rgba(95, 88, 255, .3)
+        }
+
+        /* HERO */
+        .hero {
+            padding: 120px 0 72px;
+            background: var(--fc-midnight);
+            position: relative;
+            overflow: hidden
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 25% 0%, rgba(95, 88, 255, .14) 0%, transparent 50%), radial-gradient(ellipse at 80% 100%, rgba(141, 88, 255, .07) 0%, transparent 40%)
+        }
+
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(179, 173, 252, .025) 1px, transparent 1px), linear-gradient(90deg, rgba(179, 173, 252, .025) 1px, transparent 1px);
+            background-size: 48px 48px
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2
+        }
+
+        .hero-layout {
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+            gap: 44px;
+            align-items: center
+        }
+
+        @media(max-width:900px) {
+            .hero-layout {
+                grid-template-columns: 1fr;
+                gap: 32px
+            }
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px
+        }
 
         /* FIX 1: Badge uses Manrope */
-        .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(95,88,255,.1);border:1px solid rgba(179,173,252,.18);color:var(--fc-violet);font-family:var(--font-headline);font-size:11px;font-weight:700;padding:5px 14px;border-radius:50px;margin-bottom:20px;text-transform:uppercase;letter-spacing:1.5px}  
-        .hero-badge::before{content:'';width:6px;height:6px;background:var(--fc-violet);border-radius:50%;animation:pulse 2s infinite}  
-        @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}  
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(95, 88, 255, .1);
+            border: 1px solid rgba(179, 173, 252, .18);
+            color: var(--fc-violet);
+            font-family: var(--font-headline);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 5px 14px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--fc-violet);
+            border-radius: 50%;
+            animation: pulse 2s infinite
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1
+            }
+
+            50% {
+                opacity: .3
+            }
+        }
+
         /* FIX 1: Hero h1 uses Manrope Semibold (headline typeface) */
-        .hero h1{font-family:var(--font-headline);font-size:clamp(28px,4.2vw,46px);line-height:1.15;color:#fff;margin-bottom:18px;font-weight:700;letter-spacing:-.5px}  
-        .hero h1 em{font-style:normal;background:linear-gradient(135deg,var(--fc-grad-1),var(--fc-grad-2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}  
-        .hero-sub{font-size:clamp(14px,1.6vw,16px);color:rgba(255,255,255,.55);line-height:1.7;max-width:500px;margin-bottom:28px}  
-        .hero-sub strong{color:rgba(255,255,255,.85);font-weight:600}  
-        .hero-proof{display:flex;gap:24px;flex-wrap:wrap}  
-        .hero-proof-item{display:flex;align-items:center;gap:6px;font-size:12px;color:rgba(255,255,255,.45)}  
-        .hero-proof-item svg{width:14px;height:14px;stroke:var(--fc-violet);flex-shrink:0}  
-  
-        /* FORM */  
-        .form-card{background:rgba(255,255,255,.04);border:1px solid rgba(179,173,252,.1);border-radius:14px;padding:28px 24px;backdrop-filter:blur(8px)}  
-        .form-card h3{font-family:var(--font-headline);font-size:18px;font-weight:700;color:#fff;margin-bottom:3px}  
-        .form-sub{color:rgba(255,255,255,.4);font-size:12px;margin-bottom:18px}  
-        .fg{margin-bottom:10px}  
-        .fg label{display:block;font-family:var(--font-headline);font-size:11px;font-weight:600;color:rgba(255,255,255,.45);margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px}  
-        .fg input,.fg select{width:100%;padding:10px 12px;border:1px solid rgba(179,173,252,.1);border-radius:7px;background:rgba(255,255,255,.04);color:#fff;font-size:14px;font-family:var(--font-body);transition:border-color .2s}  
-        .fg input::placeholder{color:rgba(255,255,255,.2)}  
-        .fg input:focus,.fg select:focus{outline:none;border-color:var(--fc-grad-1);background:rgba(95,88,255,.05)}  
-        .fg select option{color:#333;background:#fff}  
-        .cta-btn{display:block;width:100%;padding:13px;background:linear-gradient(135deg,var(--fc-grad-1),var(--fc-grad-2));color:#fff;font-family:var(--font-headline);font-size:14px;font-weight:700;border:none;border-radius:9px;cursor:pointer;transition:all .25s;text-transform:uppercase;letter-spacing:.7px;margin-top:4px;box-shadow:0 4px 18px rgba(95,88,255,.28)}  
-        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(95,88,255,.38)}  
-        .form-footer{text-align:center;font-size:10px;color:rgba(255,255,255,.25);margin-top:10px}  
-  
-        /* TRUST */  
-        .trust{background:var(--fc-sand);padding:48px 0}  
-        .trust-label{text-align:center;font-family:var(--font-headline);font-size:11px;font-weight:700;color:var(--fc-gray-500);text-transform:uppercase;letter-spacing:2px;margin-bottom:28px}  
-        .trust-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}  
-        @media(max-width:700px){.trust-stats{grid-template-columns:repeat(2,1fr);gap:16px}}  
-        .trust-stat{text-align:center}  
-        .trust-num{font-family:var(--font-headline);font-size:clamp(30px,3.5vw,42px);font-weight:800;color:var(--fc-midnight);line-height:1;letter-spacing:-1px}  
-        .trust-num span{background:linear-gradient(135deg,var(--fc-grad-1),var(--fc-grad-2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}  
-        .trust-desc{font-size:12px;color:var(--fc-gray-600);margin-top:6px;line-height:1.4}  
-  
-        /* PAIN SECTION */  
-        .pain{padding:72px 0;background:var(--fc-white)}  
-        .pain-inner{max-width:740px;margin:0 auto;text-align:center}  
-        .pain h2{font-family:var(--font-headline);font-size:clamp(24px,3.2vw,34px);font-weight:700;color:var(--fc-midnight);letter-spacing:-.3px;margin-bottom:20px;line-height:1.2}  
-        .pain p{font-size:15px;color:var(--fc-gray-600);line-height:1.75;margin-bottom:16px}  
-        .pain p strong{color:var(--fc-midnight)}  
-        .pain-divider{width:60px;height:3px;background:linear-gradient(90deg,var(--fc-grad-1),var(--fc-grad-2));border-radius:2px;margin:32px auto}  
-  
-        /* TESTIMONIALS */  
-        .test{padding:64px 0;background:var(--fc-sand)}  
-        .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}  
-        @media(max-width:800px){.test-grid{grid-template-columns:1fr}}  
-        .test-card{background:var(--fc-white);border-radius:var(--radius);padding:28px 22px;position:relative}  
-        .test-card::before{content:'\201C';font-family:var(--font-headline);font-size:48px;color:var(--fc-grad-1);position:absolute;top:10px;left:18px;line-height:1;opacity:.3}  
-        .test-q{font-size:14px;line-height:1.75;color:var(--fc-gray-600);margin-bottom:16px;padding-top:18px;font-style:italic}  
-        .test-q strong{color:var(--fc-midnight);font-style:normal}  
-        .test-who{display:flex;align-items:center;gap:10px}  
-        .test-av{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--fc-grad-1),var(--fc-grad-2));display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--font-headline);font-weight:700;font-size:12px}  
-        .test-name{font-family:var(--font-headline);font-weight:700;font-size:12px;color:var(--fc-midnight)}  
-        .test-role{font-size:11px;color:var(--fc-gray-500)}  
-  
-        /* HOW IT WORKS */  
-        .how{padding:72px 0;background:var(--fc-midnight);position:relative;overflow:hidden}  
-        .how::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 100%,rgba(95,88,255,.07),transparent 60%)}  
-        .how .container{position:relative;z-index:1}  
-        .eyebrow{font-family:var(--font-headline);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px}  
-        .eyebrow-g{background:linear-gradient(135deg,var(--fc-grad-1),var(--fc-grad-2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}  
-        .eyebrow-d{color:var(--fc-grad-1)}  
-        .sec-h{font-family:var(--font-headline);font-size:clamp(24px,3.2vw,36px);font-weight:700;margin-bottom:44px;letter-spacing:-.3px}  
-        .sec-h.light{color:#fff} .sec-h.dark{color:var(--fc-midnight)}  
-        .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}  
-        @media(max-width:768px){.steps{grid-template-columns:1fr;gap:16px}}  
-        .step{background:rgba(255,255,255,.035);border:1px solid rgba(179,173,252,.07);border-radius:var(--radius);padding:28px 22px;text-align:center;transition:transform .3s,border-color .3s}  
-        .step:hover{transform:translateY(-3px);border-color:rgba(95,88,255,.2)}  
-        .step-n{font-family:var(--font-headline);font-size:40px;font-weight:800;background:linear-gradient(135deg,var(--fc-grad-1),var(--fc-grad-2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:12px}  
-        .step h4{font-family:var(--font-headline);font-size:16px;font-weight:700;color:#fff;margin-bottom:6px}  
-        .step p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.65}  
-        .steps-cta{text-align:center;margin-top:40px}  
-        .btn-g{display:inline-block;padding:15px 34px;background:linear-gradient(135deg,var(--fc-grad-1),var(--fc-grad-2));color:#fff;font-family:var(--font-headline);font-size:14px;font-weight:700;border-radius:10px;text-decoration:none;text-transform:uppercase;letter-spacing:.7px;transition:all .25s;box-shadow:0 4px 18px rgba(95,88,255,.28)}  
-        .btn-g:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(95,88,255,.38)}  
-        .btn-sub{font-size:10px;color:rgba(255,255,255,.25);margin-top:8px}  
-  
-        /* REPLACES */  
-        .replaces{padding:72px 0;background:var(--fc-white)}  
-        .replaces-layout{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}  
-        @media(max-width:900px){.replaces-layout{grid-template-columns:1fr;gap:32px}}  
-        .replace-panel{background:var(--fc-midnight);border-radius:16px;padding:36px 28px;position:relative;overflow:hidden}  
-        .replace-panel::after{content:'';position:absolute;top:-50px;right:-50px;width:180px;height:180px;background:radial-gradient(circle,rgba(95,88,255,.12),transparent 70%);border-radius:50%}  
-        .rp-row{position:relative;z-index:1;display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid rgba(179,173,252,.06)}  
-        .rp-row:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}  
-        .rp-old{font-size:13px;color:rgba(255,255,255,.3);text-decoration:line-through;min-width:140px}  
-        .rp-arrow{color:var(--fc-violet);font-size:16px;flex-shrink:0}  
-        .rp-new{font-size:13px;font-weight:600;color:#fff}  
-        .benefit-item{display:flex;gap:12px;margin-bottom:22px}  
-        .benefit-item:last-child{margin-bottom:0}  
-        .bi-icon{flex-shrink:0;width:36px;height:36px;background:rgba(95,88,255,.07);border-radius:9px;display:flex;align-items:center;justify-content:center}  
-        .bi-icon svg{width:18px;height:18px;stroke:var(--fc-grad-1)}  
-        .bi-text h4{font-family:var(--font-headline);font-size:14px;font-weight:700;color:var(--fc-midnight);margin-bottom:2px}  
-        .bi-text p{font-size:13px;color:var(--fc-gray-500);line-height:1.6}  
-  
-        /* MORE PROOF */  
-        .proof{padding:72px 0;background:var(--fc-sand)}  
-        .proof-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}  
-        @media(max-width:800px){.proof-cards{grid-template-columns:1fr}}  
-        .pc{background:var(--fc-white);border-radius:var(--radius);padding:26px 22px;border:1px solid var(--fc-gray-200);transition:transform .3s,box-shadow .3s}  
-        .pc:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(17,8,35,.07)}  
-        .pc-q{font-size:13px;color:var(--fc-gray-600);line-height:1.75;margin-bottom:16px;font-style:italic}  
-        .pc-q strong{color:var(--fc-midnight);font-style:normal}  
-        .pc-who{display:flex;align-items:center;gap:10px;border-top:1px solid var(--fc-gray-200);padding-top:12px}  
-        .pc-av{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--fc-grad-1),var(--fc-grad-2));display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--font-headline);font-weight:700;font-size:11px}  
-        .pc-name{font-family:var(--font-headline);font-weight:700;font-size:12px;color:var(--fc-midnight)}  
-        .pc-org{font-size:10px;color:var(--fc-gray-500)}  
-  
-        /* FINAL CTA */  
-        .final{padding:88px 0;background:var(--fc-midnight);text-align:center;position:relative;overflow:hidden}  
-        .final::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center 20%,rgba(95,88,255,.1),transparent 50%)}  
-        .final .container{position:relative;z-index:1}  
-        .final h2{font-family:var(--font-headline);font-size:clamp(24px,3.5vw,38px);color:#fff;margin-bottom:12px;font-weight:700;letter-spacing:-.3px}  
-        .final h2 em{font-style:normal;background:linear-gradient(135deg,var(--fc-grad-1),var(--fc-grad-2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}  
-        .final p{font-size:16px;color:rgba(255,255,255,.45);max-width:480px;margin:0 auto 28px;line-height:1.65}  
-  
-        /* FOOTER */  
-        .footer{background:#0A0618;padding:28px 0;text-align:center}  
-        .footer-logo{display:inline-flex;align-items:center;gap:8px;margin-bottom:10px}  
-        .footer-logo-icon{width:22px;height:22px;background:linear-gradient(135deg,var(--fc-grad-1),var(--fc-grad-2));border-radius:5px;display:flex;align-items:center;justify-content:center}  
-        .footer-logo-icon svg{width:12px;height:12px}  
-        .footer-logo-text{font-family:var(--font-headline);font-size:15px;font-weight:700;color:rgba(255,255,255,.3)}  
-        .footer p{font-size:10px;color:rgba(255,255,255,.18);line-height:1.8}  
-        .footer a{color:rgba(255,255,255,.25);text-decoration:none}  
-        .footer a:hover{color:var(--fc-violet)}  
-  
-        /* ANIMATIONS */  
-        .fi{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}  
-        .fi.v{opacity:1;transform:translateY(0)}  
-        .stagger>*:nth-child(1){transition-delay:0s}  
-        .stagger>*:nth-child(2){transition-delay:.07s}  
-        .stagger>*:nth-child(3){transition-delay:.14s}  
-        .stagger>*:nth-child(4){transition-delay:.21s}  
-  
-        /* HERO BULLETS */  
-        .hero-bullets{display:flex;flex-direction:column;gap:10px}  
-        .hero-bullet{display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,.65);line-height:1.5}  
-        .hb-check{display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:rgba(95,88,255,.2);color:var(--fc-violet);font-size:12px;font-weight:700;flex-shrink:0}  
-  
-        /* PAIN QUESTIONS */  
-        .pain-questions{display:flex;flex-direction:column;gap:14px;margin:28px 0;max-width:600px;margin-left:auto;margin-right:auto;text-align:left}  
-        .pq{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--fc-gray-600);line-height:1.65}  
-        .pq strong{color:var(--fc-midnight)}  
-        .pq-icon{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,rgba(95,88,255,.08),rgba(141,88,255,.08));color:var(--fc-grad-1);font-family:var(--font-headline);font-size:14px;font-weight:800;flex-shrink:0;margin-top:1px}  
-        .pain-bottom{font-size:15px;color:var(--fc-gray-600);line-height:1.75;margin-top:28px;text-align:center}  
-        .pain-bottom strong{color:var(--fc-midnight)}  
-  
-        /* COMPARISON TABLE */  
-        .compare{padding:72px 0;background:var(--fc-white)}  
-        .cmp-table{max-width:900px;margin:0 auto;border-radius:14px;overflow:hidden;border:1px solid var(--fc-gray-200);background:var(--fc-white)}  
-        .cmp-header{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;background:var(--fc-midnight);padding:0}  
-        .cmp-feature-label{padding:16px 20px}  
-        .cmp-col-head{padding:16px 12px;font-family:var(--font-headline);font-size:12px;font-weight:700;text-align:center;color:rgba(255,255,255,.5);line-height:1.35;text-transform:uppercase;letter-spacing:.5px}  
-        .cmp-col-fc{background:linear-gradient(135deg,var(--fc-grad-1),var(--fc-grad-2));color:#fff !important;font-size:13px;letter-spacing:0}  
-        .cmp-row{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;border-bottom:1px solid var(--fc-gray-200);transition:background .15s}  
-        .cmp-row:hover{background:rgba(95,88,255,.02)}  
-        .cmp-row-last{border-bottom:none}  
-        .cmp-feature{padding:14px 20px;font-family:var(--font-headline);font-size:13px;font-weight:600;color:var(--fc-midnight);display:flex;align-items:center}  
-        .cmp-cell{padding:14px 12px;text-align:center;display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--fc-gray-500);gap:4px}  
-        .cmp-x{font-size:18px;color:var(--fc-gray-300);font-weight:300}  
-        .cmp-ck{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--fc-grad-1),var(--fc-grad-2));color:#fff;font-size:13px;font-weight:700}  
-        .cmp-dash{font-size:16px;color:var(--fc-tangerine);font-weight:700}  
-        @media(max-width:700px){  
-            .cmp-header,.cmp-row{grid-template-columns:1.4fr .8fr .8fr .8fr}  
-            .cmp-feature{font-size:11px;padding:12px 12px}  
-            .cmp-col-head{font-size:10px;padding:12px 6px}  
-            .cmp-cell{padding:12px 6px;font-size:10px}  
-        }  
+        .hero h1 {
+            font-family: var(--font-headline);
+            font-size: clamp(28px, 4.2vw, 46px);
+            line-height: 1.15;
+            color: #fff;
+            margin-bottom: 18px;
+            font-weight: 700;
+            letter-spacing: -.5px
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            background: linear-gradient(135deg, var(--fc-grad-1), var(--fc-grad-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text
+        }
+
+        .hero-sub {
+            font-size: clamp(14px, 1.6vw, 16px);
+            color: rgba(255, 255, 255, .55);
+            line-height: 1.7;
+            max-width: 500px;
+            margin-bottom: 28px
+        }
+
+        .hero-sub strong {
+            color: rgba(255, 255, 255, .85);
+            font-weight: 600
+        }
+
+        .hero-proof {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap
+        }
+
+        .hero-proof-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, .45)
+        }
+
+        .hero-proof-item svg {
+            width: 14px;
+            height: 14px;
+            stroke: var(--fc-violet);
+            flex-shrink: 0
+        }
+
+        /* FORM */
+        .form-card {
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(179, 173, 252, .1);
+            border-radius: 14px;
+            padding: 28px 24px;
+            backdrop-filter: blur(8px)
+        }
+
+        .form-card h3 {
+            font-family: var(--font-headline);
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 3px
+        }
+
+        .form-sub {
+            color: rgba(255, 255, 255, .4);
+            font-size: 12px;
+            margin-bottom: 18px
+        }
+
+        .fg {
+            margin-bottom: 10px
+        }
+
+        .fg label {
+            display: block;
+            font-family: var(--font-headline);
+            font-size: 11px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, .45);
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: .5px
+        }
+
+        .fg input,
+        .fg select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid rgba(179, 173, 252, .1);
+            border-radius: 7px;
+            background: rgba(255, 255, 255, .04);
+            color: #fff;
+            font-size: 14px;
+            font-family: var(--font-body);
+            transition: border-color .2s
+        }
+
+        .fg input::placeholder {
+            color: rgba(255, 255, 255, .2)
+        }
+
+        .fg input:focus,
+        .fg select:focus {
+            outline: none;
+            border-color: var(--fc-grad-1);
+            background: rgba(95, 88, 255, .05)
+        }
+
+        .fg select option {
+            color: #333;
+            background: #fff
+        }
+
+        .cta-btn {
+            display: block;
+            width: 100%;
+            padding: 13px;
+            background: linear-gradient(135deg, var(--fc-grad-1), var(--fc-grad-2));
+            color: #fff;
+            font-family: var(--font-headline);
+            font-size: 14px;
+            font-weight: 700;
+            border: none;
+            border-radius: 9px;
+            cursor: pointer;
+            transition: all .25s;
+            text-transform: uppercase;
+            letter-spacing: .7px;
+            margin-top: 4px;
+            box-shadow: 0 4px 18px rgba(95, 88, 255, .28)
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(95, 88, 255, .38)
+        }
+
+        .form-footer {
+            text-align: center;
+            font-size: 10px;
+            color: rgba(255, 255, 255, .25);
+            margin-top: 10px
+        }
+
+        /* TRUST */
+        .trust {
+            background: var(--fc-sand);
+            padding: 48px 0
+        }
+
+        .trust-label {
+            text-align: center;
+            font-family: var(--font-headline);
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--fc-gray-500);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 28px
+        }
+
+        .trust-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px
+        }
+
+        @media(max-width:700px) {
+            .trust-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px
+            }
+        }
+
+        .trust-stat {
+            text-align: center
+        }
+
+        .trust-num {
+            font-family: var(--font-headline);
+            font-size: clamp(30px, 3.5vw, 42px);
+            font-weight: 800;
+            color: var(--fc-midnight);
+            line-height: 1;
+            letter-spacing: -1px
+        }
+
+        .trust-num span {
+            background: linear-gradient(135deg, var(--fc-grad-1), var(--fc-grad-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text
+        }
+
+        .trust-desc {
+            font-size: 12px;
+            color: var(--fc-gray-600);
+            margin-top: 6px;
+            line-height: 1.4
+        }
+
+        /* PAIN SECTION */
+        .pain {
+            padding: 72px 0;
+            background: var(--fc-white)
+        }
+
+        .pain-inner {
+            max-width: 740px;
+            margin: 0 auto;
+            text-align: center
+        }
+
+        .pain h2 {
+            font-family: var(--font-headline);
+            font-size: clamp(24px, 3.2vw, 34px);
+            font-weight: 700;
+            color: var(--fc-midnight);
+            letter-spacing: -.3px;
+            margin-bottom: 20px;
+            line-height: 1.2
+        }
+
+        .pain p {
+            font-size: 15px;
+            color: var(--fc-gray-600);
+            line-height: 1.75;
+            margin-bottom: 16px
+        }
+
+        .pain p strong {
+            color: var(--fc-midnight)
+        }
+
+        .pain-divider {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--fc-grad-1), var(--fc-grad-2));
+            border-radius: 2px;
+            margin: 32px auto
+        }
+
+        /* TESTIMONIALS */
+        .test {
+            padding: 64px 0;
+            background: var(--fc-sand)
+        }
+
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px
+        }
+
+        @media(max-width:800px) {
+            .test-grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .test-card {
+            background: var(--fc-white);
+            border-radius: var(--radius);
+            padding: 28px 22px;
+            position: relative
+        }
+
+        .test-card::before {
+            content: '\201C';
+            font-family: var(--font-headline);
+            font-size: 48px;
+            color: var(--fc-grad-1);
+            position: absolute;
+            top: 10px;
+            left: 18px;
+            line-height: 1;
+            opacity: .3
+        }
+
+        .test-q {
+            font-size: 14px;
+            line-height: 1.75;
+            color: var(--fc-gray-600);
+            margin-bottom: 16px;
+            padding-top: 18px;
+            font-style: italic
+        }
+
+        .test-q strong {
+            color: var(--fc-midnight);
+            font-style: normal
+        }
+
+        .test-who {
+            display: flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        .test-av {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--fc-grad-1), var(--fc-grad-2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-family: var(--font-headline);
+            font-weight: 700;
+            font-size: 12px
+        }
+
+        .test-name {
+            font-family: var(--font-headline);
+            font-weight: 700;
+            font-size: 12px;
+            color: var(--fc-midnight)
+        }
+
+        .test-role {
+            font-size: 11px;
+            color: var(--fc-gray-500)
+        }
+
+        /* HOW IT WORKS */
+        .how {
+            padding: 72px 0;
+            background: var(--fc-midnight);
+            position: relative;
+            overflow: hidden
+        }
+
+        .how::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 50% 100%, rgba(95, 88, 255, .07), transparent 60%)
+        }
+
+        .how .container {
+            position: relative;
+            z-index: 1
+        }
+
+        .eyebrow {
+            font-family: var(--font-headline);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 8px
+        }
+
+        .eyebrow-g {
+            background: linear-gradient(135deg, var(--fc-grad-1), var(--fc-grad-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text
+        }
+
+        .eyebrow-d {
+            color: var(--fc-grad-1)
+        }
+
+        .sec-h {
+            font-family: var(--font-headline);
+            font-size: clamp(24px, 3.2vw, 36px);
+            font-weight: 700;
+            margin-bottom: 44px;
+            letter-spacing: -.3px
+        }
+
+        .sec-h.light {
+            color: #fff
+        }
+
+        .sec-h.dark {
+            color: var(--fc-midnight)
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px
+        }
+
+        @media(max-width:768px) {
+            .steps {
+                grid-template-columns: 1fr;
+                gap: 16px
+            }
+        }
+
+        .step {
+            background: rgba(255, 255, 255, .035);
+            border: 1px solid rgba(179, 173, 252, .07);
+            border-radius: var(--radius);
+            padding: 28px 22px;
+            text-align: center;
+            transition: transform .3s, border-color .3s
+        }
+
+        .step:hover {
+            transform: translateY(-3px);
+            border-color: rgba(95, 88, 255, .2)
+        }
+
+        .step-n {
+            font-family: var(--font-headline);
+            font-size: 40px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--fc-grad-1), var(--fc-grad-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 12px
+        }
+
+        .step h4 {
+            font-family: var(--font-headline);
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 6px
+        }
+
+        .step p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, .45);
+            line-height: 1.65
+        }
+
+        .steps-cta {
+            text-align: center;
+            margin-top: 40px
+        }
+
+        .btn-g {
+            display: inline-block;
+            padding: 15px 34px;
+            background: linear-gradient(135deg, var(--fc-grad-1), var(--fc-grad-2));
+            color: #fff;
+            font-family: var(--font-headline);
+            font-size: 14px;
+            font-weight: 700;
+            border-radius: 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: .7px;
+            transition: all .25s;
+            box-shadow: 0 4px 18px rgba(95, 88, 255, .28)
+        }
+
+        .btn-g:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(95, 88, 255, .38)
+        }
+
+        .btn-sub {
+            font-size: 10px;
+            color: rgba(255, 255, 255, .25);
+            margin-top: 8px
+        }
+
+        /* REPLACES */
+        .replaces {
+            padding: 72px 0;
+            background: var(--fc-white)
+        }
+
+        .replaces-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center
+        }
+
+        @media(max-width:900px) {
+            .replaces-layout {
+                grid-template-columns: 1fr;
+                gap: 32px
+            }
+        }
+
+        .replace-panel {
+            background: var(--fc-midnight);
+            border-radius: 16px;
+            padding: 36px 28px;
+            position: relative;
+            overflow: hidden
+        }
+
+        .replace-panel::after {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle, rgba(95, 88, 255, .12), transparent 70%);
+            border-radius: 50%
+        }
+
+        .rp-row {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(179, 173, 252, .06)
+        }
+
+        .rp-row:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none
+        }
+
+        .rp-old {
+            font-size: 13px;
+            color: rgba(255, 255, 255, .3);
+            text-decoration: line-through;
+            min-width: 140px
+        }
+
+        .rp-arrow {
+            color: var(--fc-violet);
+            font-size: 16px;
+            flex-shrink: 0
+        }
+
+        .rp-new {
+            font-size: 13px;
+            font-weight: 600;
+            color: #fff
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 22px
+        }
+
+        .benefit-item:last-child {
+            margin-bottom: 0
+        }
+
+        .bi-icon {
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            background: rgba(95, 88, 255, .07);
+            border-radius: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .bi-icon svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--fc-grad-1)
+        }
+
+        .bi-text h4 {
+            font-family: var(--font-headline);
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--fc-midnight);
+            margin-bottom: 2px
+        }
+
+        .bi-text p {
+            font-size: 13px;
+            color: var(--fc-gray-500);
+            line-height: 1.6
+        }
+
+        /* MORE PROOF */
+        .proof {
+            padding: 72px 0;
+            background: var(--fc-sand)
+        }
+
+        .proof-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 36px
+        }
+
+        @media(max-width:800px) {
+            .proof-cards {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .pc {
+            background: var(--fc-white);
+            border-radius: var(--radius);
+            padding: 26px 22px;
+            border: 1px solid var(--fc-gray-200);
+            transition: transform .3s, box-shadow .3s
+        }
+
+        .pc:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 32px rgba(17, 8, 35, .07)
+        }
+
+        .pc-q {
+            font-size: 13px;
+            color: var(--fc-gray-600);
+            line-height: 1.75;
+            margin-bottom: 16px;
+            font-style: italic
+        }
+
+        .pc-q strong {
+            color: var(--fc-midnight);
+            font-style: normal
+        }
+
+        .pc-who {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-top: 1px solid var(--fc-gray-200);
+            padding-top: 12px
+        }
+
+        .pc-av {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--fc-grad-1), var(--fc-grad-2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-family: var(--font-headline);
+            font-weight: 700;
+            font-size: 11px
+        }
+
+        .pc-name {
+            font-family: var(--font-headline);
+            font-weight: 700;
+            font-size: 12px;
+            color: var(--fc-midnight)
+        }
+
+        .pc-org {
+            font-size: 10px;
+            color: var(--fc-gray-500)
+        }
+
+        /* FINAL CTA */
+        .final {
+            padding: 88px 0;
+            background: var(--fc-midnight);
+            text-align: center;
+            position: relative;
+            overflow: hidden
+        }
+
+        .final::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center 20%, rgba(95, 88, 255, .1), transparent 50%)
+        }
+
+        .final .container {
+            position: relative;
+            z-index: 1
+        }
+
+        .final h2 {
+            font-family: var(--font-headline);
+            font-size: clamp(24px, 3.5vw, 38px);
+            color: #fff;
+            margin-bottom: 12px;
+            font-weight: 700;
+            letter-spacing: -.3px
+        }
+
+        .final h2 em {
+            font-style: normal;
+            background: linear-gradient(135deg, var(--fc-grad-1), var(--fc-grad-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text
+        }
+
+        .final p {
+            font-size: 16px;
+            color: rgba(255, 255, 255, .45);
+            max-width: 480px;
+            margin: 0 auto 28px;
+            line-height: 1.65
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #0A0618;
+            padding: 28px 0;
+            text-align: center
+        }
+
+        .footer-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px
+        }
+
+        .footer-logo-icon {
+            width: 22px;
+            height: 22px;
+            background: linear-gradient(135deg, var(--fc-grad-1), var(--fc-grad-2));
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .footer-logo-icon svg {
+            width: 12px;
+            height: 12px
+        }
+
+        .footer-logo-text {
+            font-family: var(--font-headline);
+            font-size: 15px;
+            font-weight: 700;
+            color: rgba(255, 255, 255, .3)
+        }
+
+        .footer p {
+            font-size: 10px;
+            color: rgba(255, 255, 255, .18);
+            line-height: 1.8
+        }
+
+        .footer a {
+            color: rgba(255, 255, 255, .25);
+            text-decoration: none
+        }
+
+        .footer a:hover {
+            color: var(--fc-violet)
+        }
+
+        /* ANIMATIONS */
+        .fi {
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity .6s ease, transform .6s ease
+        }
+
+        .fi.v {
+            opacity: 1;
+            transform: translateY(0)
+        }
+
+        .stagger>*:nth-child(1) {
+            transition-delay: 0s
+        }
+
+        .stagger>*:nth-child(2) {
+            transition-delay: .07s
+        }
+
+        .stagger>*:nth-child(3) {
+            transition-delay: .14s
+        }
+
+        .stagger>*:nth-child(4) {
+            transition-delay: .21s
+        }
+
+        /* HERO BULLETS */
+        .hero-bullets {
+            display: flex;
+            flex-direction: column;
+            gap: 10px
+        }
+
+        .hero-bullet {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, .65);
+            line-height: 1.5
+        }
+
+        .hb-check {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: rgba(95, 88, 255, .2);
+            color: var(--fc-violet);
+            font-size: 12px;
+            font-weight: 700;
+            flex-shrink: 0
+        }
+
+        /* PAIN QUESTIONS */
+        .pain-questions {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin: 28px 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left
+        }
+
+        .pq {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 15px;
+            color: var(--fc-gray-600);
+            line-height: 1.65
+        }
+
+        .pq strong {
+            color: var(--fc-midnight)
+        }
+
+        .pq-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(95, 88, 255, .08), rgba(141, 88, 255, .08));
+            color: var(--fc-grad-1);
+            font-family: var(--font-headline);
+            font-size: 14px;
+            font-weight: 800;
+            flex-shrink: 0;
+            margin-top: 1px
+        }
+
+        .pain-bottom {
+            font-size: 15px;
+            color: var(--fc-gray-600);
+            line-height: 1.75;
+            margin-top: 28px;
+            text-align: center
+        }
+
+        .pain-bottom strong {
+            color: var(--fc-midnight)
+        }
+
+        /* COMPARISON TABLE */
+        .compare {
+            padding: 72px 0;
+            background: var(--fc-white)
+        }
+
+        .cmp-table {
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid var(--fc-gray-200);
+            background: var(--fc-white)
+        }
+
+        .cmp-header {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr 1fr 1fr;
+            background: var(--fc-midnight);
+            padding: 0
+        }
+
+        .cmp-feature-label {
+            padding: 16px 20px
+        }
+
+        .cmp-col-head {
+            padding: 16px 12px;
+            font-family: var(--font-headline);
+            font-size: 12px;
+            font-weight: 700;
+            text-align: center;
+            color: rgba(255, 255, 255, .5);
+            line-height: 1.35;
+            text-transform: uppercase;
+            letter-spacing: .5px
+        }
+
+        .cmp-col-fc {
+            background: linear-gradient(135deg, var(--fc-grad-1), var(--fc-grad-2));
+            color: #fff !important;
+            font-size: 13px;
+            letter-spacing: 0
+        }
+
+        .cmp-row {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr 1fr 1fr;
+            border-bottom: 1px solid var(--fc-gray-200);
+            transition: background .15s
+        }
+
+        .cmp-row:hover {
+            background: rgba(95, 88, 255, .02)
+        }
+
+        .cmp-row-last {
+            border-bottom: none
+        }
+
+        .cmp-feature {
+            padding: 14px 20px;
+            font-family: var(--font-headline);
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--fc-midnight);
+            display: flex;
+            align-items: center
+        }
+
+        .cmp-cell {
+            padding: 14px 12px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: var(--fc-gray-500);
+            gap: 4px
+        }
+
+        .cmp-x {
+            font-size: 18px;
+            color: var(--fc-gray-300);
+            font-weight: 300
+        }
+
+        .cmp-ck {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--fc-grad-1), var(--fc-grad-2));
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700
+        }
+
+        .cmp-dash {
+            font-size: 16px;
+            color: var(--fc-tangerine);
+            font-weight: 700
+        }
+
+        @media(max-width:700px) {
+
+            .cmp-header,
+            .cmp-row {
+                grid-template-columns: 1.4fr .8fr .8fr .8fr
+            }
+
+            .cmp-feature {
+                font-size: 11px;
+                padding: 12px 12px
+            }
+
+            .cmp-col-head {
+                font-size: 10px;
+                padding: 12px 6px
+            }
+
+            .cmp-cell {
+                padding: 12px 6px;
+                font-size: 10px
+            }
+        }
+
         /* QUIZ FUNNEL */
-        #quiz-container{position:relative;overflow:hidden}
-        .quiz-step{display:none;opacity:0;transform:translateX(20px);transition:opacity .35s ease,transform .35s ease}
-        .quiz-step[data-active="true"]{display:block}
-        .quiz-step.visible{opacity:1;transform:translateX(0)}
-        .quiz-step.exiting{opacity:0;transform:translateX(-20px);transition:opacity .25s ease,transform .25s ease}
-        .quiz-q{font-family:var(--font-headline);font-size:13px;font-weight:600;color:rgba(255,255,255,.7);margin-bottom:12px}
-        .quiz-opts{display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
-        .quiz-opt{width:100%;padding:14px 16px;border:1px solid rgba(179,173,252,.12);border-radius:8px;background:rgba(255,255,255,.04);color:rgba(255,255,255,.75);font-family:var(--font-body);font-size:15px;font-weight:500;text-align:left;cursor:pointer;transition:all .2s}
-        .quiz-opt:hover{border-color:rgba(95,88,255,.4);background:rgba(95,88,255,.08);color:#fff}
-        .quiz-opt.selected{border-color:var(--fc-grad-1);background:rgba(95,88,255,.15);color:#fff}
-        .quiz-progress{width:100%;height:3px;background:rgba(255,255,255,.08);border-radius:2px;margin-top:14px;overflow:hidden}
-        .quiz-bar{height:100%;background:linear-gradient(90deg,var(--fc-grad-1),var(--fc-grad-2));border-radius:2px;transition:width .4s ease}
-        .quiz-step-label{font-size:10px;color:rgba(255,255,255,.25);text-align:center;margin-top:6px}
+        #quiz-container {
+            position: relative;
+            overflow: hidden
+        }
+
+        .quiz-step {
+            display: none;
+            opacity: 0;
+            transform: translateX(20px);
+            transition: opacity .35s ease, transform .35s ease
+        }
+
+        .quiz-step[data-active="true"] {
+            display: block
+        }
+
+        .quiz-step.visible {
+            opacity: 1;
+            transform: translateX(0)
+        }
+
+        .quiz-step.exiting {
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: opacity .25s ease, transform .25s ease
+        }
+
+        .quiz-q {
+            font-family: var(--font-headline);
+            font-size: 13px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, .7);
+            margin-bottom: 12px
+        }
+
+        .quiz-opts {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 16px
+        }
+
+        .quiz-opt {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid rgba(179, 173, 252, .12);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, .04);
+            color: rgba(255, 255, 255, .75);
+            font-family: var(--font-body);
+            font-size: 15px;
+            font-weight: 500;
+            text-align: left;
+            cursor: pointer;
+            transition: all .2s
+        }
+
+        .quiz-opt:hover {
+            border-color: rgba(95, 88, 255, .4);
+            background: rgba(95, 88, 255, .08);
+            color: #fff
+        }
+
+        .quiz-opt.selected {
+            border-color: var(--fc-grad-1);
+            background: rgba(95, 88, 255, .15);
+            color: #fff
+        }
+
+        .quiz-progress {
+            width: 100%;
+            height: 3px;
+            background: rgba(255, 255, 255, .08);
+            border-radius: 2px;
+            margin-top: 14px;
+            overflow: hidden
+        }
+
+        .quiz-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--fc-grad-1), var(--fc-grad-2));
+            border-radius: 2px;
+            transition: width .4s ease
+        }
+
+        .quiz-step-label {
+            font-size: 10px;
+            color: rgba(255, 255, 255, .25);
+            text-align: center;
+            margin-top: 6px
+        }
 
         /* PRODUCT DEMO */
-        .demo-section{padding:72px 0;background:var(--fc-white)}
-        .demo-embed{max-width:900px;margin:0 auto}
-    </style>  
-</head>  
-<body>  
-  
-<!-- NAV -->  
-<nav class="nav" id="navbar">  
-    <div class="nav-inner">  
-        <a href="https://flychain.us" class="nav-logo">  
-            <svg viewBox="0 0 1080 273" fill="none" xmlns="http://www.w3.org/2000/svg" style="height:32px;width:auto">
-                <path d="M0 50.4516C0 22.588 22.5879 0 50.4516 0H221.681C249.545 0 272.133 22.5879 272.133 50.4516V221.681C272.133 249.545 249.545 272.133 221.681 272.133H50.4516C22.588 272.133 0 249.545 0 221.681V50.4516Z" fill="url(#paint0_nav)"/>
-                <path d="M140.711 50.4517H132.083C107.313 50.4517 87.1443 70.6205 87.1443 95.3906V149.379H108.195V124.072H136.071V103.021H108.195V95.3906C108.195 82.2003 118.931 71.5024 132.083 71.5024H140.711C153.901 71.5024 164.637 82.2387 164.637 95.659V149.417H185.688V95.4289C185.649 70.6205 165.481 50.4517 140.711 50.4517Z" fill="#FCFBF7"/>
-                <path d="M164.637 177.139C164.637 190.33 153.901 201.027 140.711 201.027H132.083C118.893 201.027 108.195 190.291 108.195 177.139V160.46H87.1443V177.139C87.1443 201.909 107.313 222.078 132.083 222.078H140.711C165.481 222.078 185.649 201.909 185.649 177.139V160.46H164.599V177.139H164.637Z" fill="#FCFBF7"/>
-                <path d="M464.806 90.0135H399.074C397.558 90.0135 396.367 91.2047 396.367 92.7208V119.793C396.367 121.309 397.558 122.5 399.074 122.5H458.417C459.933 122.5 461.124 123.692 461.124 125.208V142.209C461.124 143.725 459.933 144.916 458.417 144.916H399.074C397.558 144.916 396.367 146.108 396.367 147.624V201.552C396.367 203.068 395.175 204.259 393.659 204.259H372.976C371.46 204.259 370.269 203.068 370.269 201.552V69.3302C370.269 67.8141 371.568 66.6229 372.976 66.6229H464.806C466.322 66.6229 467.513 67.8141 467.513 69.3302V87.3063C467.513 88.8223 466.322 90.0135 464.806 90.0135Z" fill="#110823"/>
-                <path d="M479.64 201.552V69.3303C479.64 67.8142 480.94 66.623 482.348 66.623H501.298C502.814 66.623 504.006 67.8142 504.006 69.3303V201.552C504.006 203.068 502.706 204.259 501.298 204.259H482.348C480.832 204.259 479.64 203.068 479.64 201.552Z" fill="#110823"/>
-                <path d="M593.236 104.525H613.053C614.894 104.525 616.194 106.365 615.544 108.098L578.292 212.381C569.954 234.797 559.342 242.377 535.41 242.377C532.378 242.377 529.67 242.377 527.288 242.053C525.88 241.944 524.797 240.753 524.797 239.345V225.268C524.797 223.752 525.988 222.56 527.505 222.56H534.11C545.156 222.56 550.57 215.846 550.57 206.534C550.57 201.877 549.054 195.163 545.914 186.392L518.192 107.99C517.542 106.257 518.841 104.416 520.682 104.416H541.257C542.449 104.416 543.423 105.174 543.856 106.257L551.328 129.323C556.31 144.808 560.641 160.077 564.648 175.238C565.298 177.837 569.088 177.945 569.846 175.238C573.636 161.702 578.184 146.324 583.274 129.431L590.746 106.149C591.071 105.066 592.154 104.308 593.345 104.308L593.236 104.525Z" fill="#110823"/>
-                <path d="M822.921 138.311V201.769C822.921 203.285 821.729 204.476 820.213 204.476H801.263C799.747 204.476 798.555 203.285 798.555 201.769V142.426C798.555 132.572 790.975 124.017 781.229 123.475C768.884 122.826 757.622 131.489 757.622 148.599V201.769C757.622 203.285 756.431 204.476 754.915 204.476H735.964C734.448 204.476 733.257 203.285 733.257 201.769V69.4388C733.257 67.9228 734.448 66.7316 735.964 66.7316H754.915C756.431 66.7316 757.622 67.9228 757.622 69.4388V117.953C765.202 107.557 775.381 102.251 787.943 102.251C809.384 102.251 822.921 115.029 822.921 138.203V138.311Z" fill="#110823"/>
-                <path d="M908.144 203.068C907.169 200.686 906.519 197.004 906.086 192.239C899.264 201.877 888.435 206.75 874.033 206.75C852.375 206.75 838.08 195.921 838.08 176.754C838.08 157.586 850.859 148.165 876.415 145.675L891.467 144.375C901.322 143.076 905.545 140.152 905.545 133.005C905.545 124.666 900.672 120.66 887.352 120.66C874.033 120.66 868.401 124.233 866.885 134.304C866.669 135.604 865.586 136.578 864.178 136.578H845.552C843.928 136.578 842.628 135.17 842.845 133.654C845.336 112.971 860.28 102.575 887.46 102.575C915.074 102.575 929.044 112.646 929.044 132.571V185.742C929.044 192.564 929.802 197.978 931.534 201.769C932.076 203.176 931.21 204.692 929.693 204.692H910.093C909.227 204.692 908.469 204.151 908.144 203.393V203.068ZM905.545 164.95V155.854C903.271 158.02 899.372 159.319 894.174 159.86L881.071 161.377C867.968 162.893 863.095 167.332 863.095 175.671C863.095 184.009 868.943 189.207 879.88 189.207C894.391 189.207 905.545 181.085 905.545 164.842V164.95Z" fill="#110823"/>
-                <path d="M947.021 201.769V107.449C947.021 105.932 948.212 104.741 949.728 104.741H968.679C970.195 104.741 971.386 105.932 971.386 107.449V201.769C971.386 203.285 970.195 204.476 968.679 204.476H949.728C948.212 204.476 947.021 203.285 947.021 201.769ZM947.238 89.0392V71.6046C947.238 70.0885 948.429 68.8973 949.945 68.8973H968.571C970.087 68.8973 971.278 70.0885 971.278 71.6046V89.0392C971.278 90.5553 970.087 91.7465 968.571 91.7465H949.945C948.429 91.7465 947.238 90.5553 947.238 89.0392Z" fill="#110823"/>
-                <path d="M1080 138.419V201.877C1080 203.393 1078.81 204.584 1077.29 204.584H1058.34C1056.83 204.584 1055.63 203.393 1055.63 201.877V142.534C1055.63 132.68 1048.05 124.125 1038.31 123.583C1025.96 122.934 1014.7 131.597 1014.7 148.707V201.877C1014.7 203.393 1013.51 204.584 1011.99 204.584H993.043C991.527 204.584 990.336 203.393 990.336 201.877V107.34C990.336 105.824 991.527 104.633 993.043 104.633H1011.24C1012.75 104.633 1013.94 105.824 1013.94 107.34V118.927C1021.52 107.881 1031.7 102.359 1045.02 102.359C1066.46 102.359 1080 115.137 1080 138.311V138.419Z" fill="#110823"/>
-                <path d="M621.069 155.746C621.069 124.45 639.586 101.926 671.857 101.926C697.955 101.926 715.606 116.328 719.396 139.177C719.612 140.369 718.638 141.343 717.447 141.343H696.005C695.139 141.343 694.381 140.693 694.164 139.827C691.349 128.673 683.011 122.717 671.748 122.717C656.371 122.717 646.625 133.871 646.625 155.637C646.625 177.404 656.588 188.557 671.748 188.557C683.227 188.557 692.323 182.277 694.598 170.365C694.814 169.498 695.572 168.74 696.438 168.74H717.772C718.963 168.74 719.829 169.715 719.721 170.906C716.255 194.622 697.521 209.457 671.748 209.457C639.695 209.457 620.96 186.717 620.96 155.637L621.069 155.746Z" fill="#110823"/>
-                <defs><linearGradient id="paint0_nav" x1="-24.2957" y1="310.604" x2="272.493" y2="-29.0596" gradientUnits="userSpaceOnUse"><stop stop-color="#5F58FF"/><stop offset="1" stop-color="#8D58FF"/></linearGradient></defs>
-            </svg>
-        </a>  
-        <a href="#form" class="nav-cta">Book a Free Demo</a>  
-    </div>  
-</nav>  
-  
-<!-- HERO -->  
-<section class="hero" id="form">  
-    <div class="hero-grid"></div>  
-    <div class="container">  
-        <div class="hero-layout">  
-            <div>  
-                <div class="hero-badge">For ABA & Healthcare Practice Owners</div>  
-                <h1>QuickBooks Wasn't Built for Healthcare. <em>Flychain Was.</em></h1>  
-                <p class="hero-sub" style="margin-bottom:20px;">  
-                    Healthcare-specialized bookkeeping, taxes, cash flow solutions, and an AI CFO built for your practice — <strong>one platform that replaces QuickBooks, your general bookkeeper, and the spreadsheets you're managing at midnight.</strong>  
-                </p>  
-                <div class="hero-bullets">  
-                    <div class="hero-bullet"><span class="hb-check">&#10003;</span> AI CFO that knows your CPT codes, payer mixes &amp; margins</div>  
-                    <div class="hero-bullet"><span class="hb-check">&#10003;</span> Benchmark your rates against other providers in your state</div>  
-                    <div class="hero-bullet"><span class="hb-check">&#10003;</span> Cash flow solutions so insurance delays don't stall payroll</div>  
-                    <div class="hero-bullet"><span class="hb-check">&#10003;</span> 200+ healthcare practices already on platform</div>  
-                </div>  
-            </div>  
-  
-            <div>  
-                <div class="form-card">  
-                    <div id="quiz-container">
-                        <!-- STEP 1 -->
-                        <div class="quiz-step" id="step-1" data-active="true">
-                            <h3>Let's Find Your Fit</h3>
-                            <p class="form-sub">Takes 30 seconds. We'll tailor your demo to your practice.</p>
-                            <p class="quiz-q">What type of practice do you run?</p>
-                            <div class="quiz-opts">
-                                <button class="quiz-opt" data-field="specialty" data-value="aba" onclick="selectOpt(this)">🧩 ABA Therapy</button>
-                                <button class="quiz-opt" data-field="specialty" data-value="homecare" onclick="selectOpt(this)">🏠 Home Care / Home Health</button>
-                                <button class="quiz-opt" data-field="specialty" data-value="sud" onclick="selectOpt(this)">💊 Substance Abuse Disorder</button>
-                                <button class="quiz-opt" data-field="specialty" data-value="other" onclick="selectOpt(this)">➕ Other Healthcare</button>
-                            </div>
-                            <div class="quiz-progress"><div class="quiz-bar" style="width:33%"></div></div>
-                            <p class="quiz-step-label">Step 1 of 3</p>
-                        </div>
+        .demo-section {
+            padding: 72px 0;
+            background: var(--fc-white)
+        }
 
-                        <!-- STEP 2 -->
-                        <div class="quiz-step" id="step-2">
-                            <h3>Almost There</h3>
-                            <p class="form-sub">This helps us show you the most relevant features.</p>
-                            <p class="quiz-q">What's your biggest financial headache right now?</p>
-                            <div class="quiz-opts">
-                                <button class="quiz-opt" data-field="pain" data-value="messy-books" onclick="selectOpt(this)">📚 My books are behind or messy</button>
-                                <button class="quiz-opt" data-field="pain" data-value="cash-flow" onclick="selectOpt(this)">💸 Cash flow gaps from insurance delays</button>
-                                <button class="quiz-opt" data-field="pain" data-value="no-visibility" onclick="selectOpt(this)">🔍 I don't have clarity on my financials</button>
-                                <button class="quiz-opt" data-field="pain" data-value="other" onclick="selectOpt(this)">➕ Something else</button>
-                            </div>
-                            <div class="quiz-progress"><div class="quiz-bar" style="width:66%"></div></div>
-                            <p class="quiz-step-label">Step 2 of 3</p>
-                        </div>
+        .demo-embed {
+            max-width: 900px;
+            margin: 0 auto
+        }
+    </style>
+</head>
 
-                        <!-- STEP 3 -->
-                        <div class="quiz-step" id="step-3">
-                            <h3>See It In Action — Free</h3>
-                            <p class="form-sub">We'll personalize your 30-min demo based on your answers.</p>
-                            <form id="demo-form" action="https://flychain.us/contact" method="GET">  
-                                <input type="hidden" name="specialty" id="hf-specialty">
-                                <input type="hidden" name="pain" id="hf-pain">
-                                <div class="fg">  
-                                    <label>Full Name</label>  
-                                    <input type="text" name="name" placeholder="Jane Smith" required>  
-                                </div>  
-                                <div class="fg">  
-                                    <label>Work Email</label>  
-                                    <input type="email" name="email" placeholder="jane@yourclinic.com" required>  
-                                </div>  
-                                <div class="fg">  
-                                    <label>Phone</label>  
-                                    <input type="tel" name="phone" placeholder="(555) 123-4567">  
-                                </div>  
-                                <button type="submit" class="cta-btn">Book My Personalized Demo &rarr;</button>  
-                            </form>
-                            <div class="quiz-progress"><div class="quiz-bar" style="width:100%"></div></div>
-                            <p class="quiz-step-label">Step 3 of 3</p>
+<body>
+
+    <!-- NAV -->
+    <nav class="nav" id="navbar">
+        <div class="nav-inner">
+            <a href="https://flychain.us" class="nav-logo">
+                <svg viewBox="0 0 1080 273" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    style="height:32px;width:auto">
+                    <path
+                        d="M0 50.4516C0 22.588 22.5879 0 50.4516 0H221.681C249.545 0 272.133 22.5879 272.133 50.4516V221.681C272.133 249.545 249.545 272.133 221.681 272.133H50.4516C22.588 272.133 0 249.545 0 221.681V50.4516Z"
+                        fill="url(#paint0_nav)" />
+                    <path
+                        d="M140.711 50.4517H132.083C107.313 50.4517 87.1443 70.6205 87.1443 95.3906V149.379H108.195V124.072H136.071V103.021H108.195V95.3906C108.195 82.2003 118.931 71.5024 132.083 71.5024H140.711C153.901 71.5024 164.637 82.2387 164.637 95.659V149.417H185.688V95.4289C185.649 70.6205 165.481 50.4517 140.711 50.4517Z"
+                        fill="#FCFBF7" />
+                    <path
+                        d="M164.637 177.139C164.637 190.33 153.901 201.027 140.711 201.027H132.083C118.893 201.027 108.195 190.291 108.195 177.139V160.46H87.1443V177.139C87.1443 201.909 107.313 222.078 132.083 222.078H140.711C165.481 222.078 185.649 201.909 185.649 177.139V160.46H164.599V177.139H164.637Z"
+                        fill="#FCFBF7" />
+                    <path
+                        d="M464.806 90.0135H399.074C397.558 90.0135 396.367 91.2047 396.367 92.7208V119.793C396.367 121.309 397.558 122.5 399.074 122.5H458.417C459.933 122.5 461.124 123.692 461.124 125.208V142.209C461.124 143.725 459.933 144.916 458.417 144.916H399.074C397.558 144.916 396.367 146.108 396.367 147.624V201.552C396.367 203.068 395.175 204.259 393.659 204.259H372.976C371.46 204.259 370.269 203.068 370.269 201.552V69.3302C370.269 67.8141 371.568 66.6229 372.976 66.6229H464.806C466.322 66.6229 467.513 67.8141 467.513 69.3302V87.3063C467.513 88.8223 466.322 90.0135 464.806 90.0135Z"
+                        fill="#110823" />
+                    <path
+                        d="M479.64 201.552V69.3303C479.64 67.8142 480.94 66.623 482.348 66.623H501.298C502.814 66.623 504.006 67.8142 504.006 69.3303V201.552C504.006 203.068 502.706 204.259 501.298 204.259H482.348C480.832 204.259 479.64 203.068 479.64 201.552Z"
+                        fill="#110823" />
+                    <path
+                        d="M593.236 104.525H613.053C614.894 104.525 616.194 106.365 615.544 108.098L578.292 212.381C569.954 234.797 559.342 242.377 535.41 242.377C532.378 242.377 529.67 242.377 527.288 242.053C525.88 241.944 524.797 240.753 524.797 239.345V225.268C524.797 223.752 525.988 222.56 527.505 222.56H534.11C545.156 222.56 550.57 215.846 550.57 206.534C550.57 201.877 549.054 195.163 545.914 186.392L518.192 107.99C517.542 106.257 518.841 104.416 520.682 104.416H541.257C542.449 104.416 543.423 105.174 543.856 106.257L551.328 129.323C556.31 144.808 560.641 160.077 564.648 175.238C565.298 177.837 569.088 177.945 569.846 175.238C573.636 161.702 578.184 146.324 583.274 129.431L590.746 106.149C591.071 105.066 592.154 104.308 593.345 104.308L593.236 104.525Z"
+                        fill="#110823" />
+                    <path
+                        d="M822.921 138.311V201.769C822.921 203.285 821.729 204.476 820.213 204.476H801.263C799.747 204.476 798.555 203.285 798.555 201.769V142.426C798.555 132.572 790.975 124.017 781.229 123.475C768.884 122.826 757.622 131.489 757.622 148.599V201.769C757.622 203.285 756.431 204.476 754.915 204.476H735.964C734.448 204.476 733.257 203.285 733.257 201.769V69.4388C733.257 67.9228 734.448 66.7316 735.964 66.7316H754.915C756.431 66.7316 757.622 67.9228 757.622 69.4388V117.953C765.202 107.557 775.381 102.251 787.943 102.251C809.384 102.251 822.921 115.029 822.921 138.203V138.311Z"
+                        fill="#110823" />
+                    <path
+                        d="M908.144 203.068C907.169 200.686 906.519 197.004 906.086 192.239C899.264 201.877 888.435 206.75 874.033 206.75C852.375 206.75 838.08 195.921 838.08 176.754C838.08 157.586 850.859 148.165 876.415 145.675L891.467 144.375C901.322 143.076 905.545 140.152 905.545 133.005C905.545 124.666 900.672 120.66 887.352 120.66C874.033 120.66 868.401 124.233 866.885 134.304C866.669 135.604 865.586 136.578 864.178 136.578H845.552C843.928 136.578 842.628 135.17 842.845 133.654C845.336 112.971 860.28 102.575 887.46 102.575C915.074 102.575 929.044 112.646 929.044 132.571V185.742C929.044 192.564 929.802 197.978 931.534 201.769C932.076 203.176 931.21 204.692 929.693 204.692H910.093C909.227 204.692 908.469 204.151 908.144 203.393V203.068ZM905.545 164.95V155.854C903.271 158.02 899.372 159.319 894.174 159.86L881.071 161.377C867.968 162.893 863.095 167.332 863.095 175.671C863.095 184.009 868.943 189.207 879.88 189.207C894.391 189.207 905.545 181.085 905.545 164.842V164.95Z"
+                        fill="#110823" />
+                    <path
+                        d="M947.021 201.769V107.449C947.021 105.932 948.212 104.741 949.728 104.741H968.679C970.195 104.741 971.386 105.932 971.386 107.449V201.769C971.386 203.285 970.195 204.476 968.679 204.476H949.728C948.212 204.476 947.021 203.285 947.021 201.769ZM947.238 89.0392V71.6046C947.238 70.0885 948.429 68.8973 949.945 68.8973H968.571C970.087 68.8973 971.278 70.0885 971.278 71.6046V89.0392C971.278 90.5553 970.087 91.7465 968.571 91.7465H949.945C948.429 91.7465 947.238 90.5553 947.238 89.0392Z"
+                        fill="#110823" />
+                    <path
+                        d="M1080 138.419V201.877C1080 203.393 1078.81 204.584 1077.29 204.584H1058.34C1056.83 204.584 1055.63 203.393 1055.63 201.877V142.534C1055.63 132.68 1048.05 124.125 1038.31 123.583C1025.96 122.934 1014.7 131.597 1014.7 148.707V201.877C1014.7 203.393 1013.51 204.584 1011.99 204.584H993.043C991.527 204.584 990.336 203.393 990.336 201.877V107.34C990.336 105.824 991.527 104.633 993.043 104.633H1011.24C1012.75 104.633 1013.94 105.824 1013.94 107.34V118.927C1021.52 107.881 1031.7 102.359 1045.02 102.359C1066.46 102.359 1080 115.137 1080 138.311V138.419Z"
+                        fill="#110823" />
+                    <path
+                        d="M621.069 155.746C621.069 124.45 639.586 101.926 671.857 101.926C697.955 101.926 715.606 116.328 719.396 139.177C719.612 140.369 718.638 141.343 717.447 141.343H696.005C695.139 141.343 694.381 140.693 694.164 139.827C691.349 128.673 683.011 122.717 671.748 122.717C656.371 122.717 646.625 133.871 646.625 155.637C646.625 177.404 656.588 188.557 671.748 188.557C683.227 188.557 692.323 182.277 694.598 170.365C694.814 169.498 695.572 168.74 696.438 168.74H717.772C718.963 168.74 719.829 169.715 719.721 170.906C716.255 194.622 697.521 209.457 671.748 209.457C639.695 209.457 620.96 186.717 620.96 155.637L621.069 155.746Z"
+                        fill="#110823" />
+                    <defs>
+                        <linearGradient id="paint0_nav" x1="-24.2957" y1="310.604" x2="272.493" y2="-29.0596"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#5F58FF" />
+                            <stop offset="1" stop-color="#8D58FF" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </a>
+            <a href="#form" class="nav-cta">Book a Free Demo</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="form">
+        <div class="hero-grid"></div>
+        <div class="container">
+            <div class="hero-layout">
+                <div>
+                    <div class="hero-badge">For ABA & Healthcare Practice Owners</div>
+                    <h1>QuickBooks Wasn't Built for Healthcare. <em>Flychain Was.</em></h1>
+                    <p class="hero-sub" style="margin-bottom:20px;">
+                        Healthcare-specialized bookkeeping, taxes, cash flow solutions, and an AI CFO built for your
+                        practice — <strong>one platform that replaces QuickBooks, your general bookkeeper, and the
+                            spreadsheets you're managing at midnight.</strong>
+                    </p>
+                    <div class="hero-bullets">
+                        <div class="hero-bullet"><span class="hb-check">&#10003;</span> AI CFO that knows your CPT
+                            codes, payer mixes &amp; margins</div>
+                        <div class="hero-bullet"><span class="hb-check">&#10003;</span> Benchmark your rates against
+                            other providers in your state</div>
+                        <div class="hero-bullet"><span class="hb-check">&#10003;</span> Cash flow solutions so insurance
+                            delays don't stall payroll</div>
+                        <div class="hero-bullet"><span class="hb-check">&#10003;</span> 200+ healthcare practices
+                            already on platform</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="form-card">
+                        <div id="quiz-container">
+                            <!-- STEP 1 -->
+                            <div class="quiz-step" id="step-1" data-active="true">
+                                <h3>Let's Find Your Fit</h3>
+                                <p class="form-sub">Takes 30 seconds. We'll tailor your demo to your practice.</p>
+                                <p class="quiz-q">What type of practice do you run?</p>
+                                <div class="quiz-opts">
+                                    <button class="quiz-opt" data-field="specialty" data-value="aba"
+                                        onclick="selectOpt(this)">🧩 ABA Therapy</button>
+                                    <button class="quiz-opt" data-field="specialty" data-value="homecare"
+                                        onclick="selectOpt(this)">🏠 Home Care / Home Health</button>
+                                    <button class="quiz-opt" data-field="specialty" data-value="sud"
+                                        onclick="selectOpt(this)">💊 Substance Abuse Disorder</button>
+                                    <button class="quiz-opt" data-field="specialty" data-value="other"
+                                        onclick="selectOpt(this)">➕ Other Healthcare</button>
+                                </div>
+                                <div class="quiz-progress">
+                                    <div class="quiz-bar" style="width:25%"></div>
+                                </div>
+                                <p class="quiz-step-label">Step 1 of 4</p>
+                            </div>
+
+                            <!-- STEP 2 -->
+                            <div class="quiz-step" id="step-2">
+                                <h3>Almost There</h3>
+                                <p class="form-sub">This helps us show you the most relevant features.</p>
+                                <p class="quiz-q">What's your biggest financial headache right now?</p>
+                                <div class="quiz-opts">
+                                    <button class="quiz-opt" data-field="pain" data-value="messy-books"
+                                        onclick="selectOpt(this)">📚 My books are behind or messy</button>
+                                    <button class="quiz-opt" data-field="pain" data-value="cash-flow"
+                                        onclick="selectOpt(this)">💸 Cash flow gaps from insurance delays</button>
+                                    <button class="quiz-opt" data-field="pain" data-value="no-visibility"
+                                        onclick="selectOpt(this)">🔍 I don't have clarity on my financials</button>
+                                    <button class="quiz-opt" data-field="pain" data-value="other"
+                                        onclick="selectOpt(this)">➕ Something else</button>
+                                </div>
+                                <div class="quiz-progress">
+                                    <div class="quiz-bar" style="width:50%"></div>
+                                </div>
+                                <p class="quiz-step-label">Step 2 of 4</p>
+                            </div>
+
+                            <!-- STEP 3 -->
+                            <div class="quiz-step" id="step-3">
+                                <h3>One Last Detail</h3>
+                                <p class="form-sub">So we can pair you with the right Flychain specialist.</p>
+                                <p class="quiz-q">What is your estimated annual revenue?</p>
+                                <div class="quiz-opts">
+                                    <button class="quiz-opt" data-field="revenue" data-value="under-250k"
+                                        onclick="selectOpt(this)">$250k or less</button>
+                                    <button class="quiz-opt" data-field="revenue" data-value="250k-500k"
+                                        onclick="selectOpt(this)">$250k - $500k</button>
+                                    <button class="quiz-opt" data-field="revenue" data-value="500k-1m"
+                                        onclick="selectOpt(this)">$500k - $1M</button>
+                                    <button class="quiz-opt" data-field="revenue" data-value="over-1m"
+                                        onclick="selectOpt(this)">$1M+</button>
+                                </div>
+                                <div class="quiz-progress">
+                                    <div class="quiz-bar" style="width:75%"></div>
+                                </div>
+                                <p class="quiz-step-label">Step 3 of 4</p>
+                            </div>
+
+                            <!-- STEP 4 -->
+                            <div class="quiz-step" id="step-4">
+                                <h3>See It In Action — Free</h3>
+                                <p class="form-sub">We'll personalize your 30-min demo based on your answers.</p>
+                                <form id="demo-form" action="https://flychain.us/contact" method="GET">
+                                    <input type="hidden" name="specialty" id="hf-specialty">
+                                    <input type="hidden" name="pain" id="hf-pain">
+                                    <input type="hidden" name="revenue" id="hf-revenue">
+                                    <div class="fg">
+                                        <label>Full Name</label>
+                                        <input type="text" name="name" placeholder="Jane Smith" required>
+                                    </div>
+                                    <div class="fg">
+                                        <label>Work Email</label>
+                                        <input type="email" name="email" placeholder="jane@yourclinic.com" required>
+                                    </div>
+                                    <div class="fg">
+                                        <label>Phone</label>
+                                        <input type="tel" name="phone" placeholder="(555) 123-4567">
+                                    </div>
+                                    <button type="submit" class="cta-btn">Book My Personalized Demo &rarr;</button>
+                                </form>
+                                <div class="quiz-progress">
+                                    <div class="quiz-bar" style="width:100%"></div>
+                                </div>
+                                <p class="quiz-step-label">Step 4 of 4</p>
+                            </div>
+                        </div>
+                        <p class="form-footer">No cost. No obligation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST -->
+    <section class="trust">
+        <div class="container">
+            <p class="trust-label">What Our Providers Are Seeing</p>
+            <div class="trust-stats stagger">
+                <div class="trust-stat fi">
+                    <div class="trust-num">24<span>/7</span></div>
+                    <div class="trust-desc">AI CFO analyzing your finances in real time</div>
+                </div>
+                <div class="trust-stat fi">
+                    <div class="trust-num">10<span>%</span></div>
+                    <div class="trust-desc">Revenue increase in six months</div>
+                </div>
+                <div class="trust-stat fi">
+                    <div class="trust-num">20<span>hrs</span></div>
+                    <div class="trust-desc">Saved per month, per location</div>
+                </div>
+                <div class="trust-stat fi">
+                    <div class="trust-num">$25K<span>/yr</span></div>
+                    <div class="trust-desc">Average savings per location</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAIN SECTION -->
+    <section class="pain">
+        <div class="container">
+            <div class="pain-inner">
+                <h2>If You Can't Answer These Questions Right Now, We Should Talk</h2>
+                <div class="pain-questions">
+                    <div class="pq"><span class="pq-icon">?</span><span>What's your contracted rate for <strong>CPT
+                                97153</strong> — and how does it compare to other providers in your state?</span></div>
+                    <div class="pq"><span class="pq-icon">?</span><span>What's your <strong>profit margin per
+                                location</strong>?</span></div>
+                    <div class="pq"><span class="pq-icon">?</span><span>Which payers are reimbursing you the most — and
+                            which are <strong>underpaying you</strong>?</span></div>
+                    <div class="pq"><span class="pq-icon">?</span><span>What's your practice actually <strong>worth
+                                today</strong>?</span></div>
+                    <div class="pq"><span class="pq-icon">?</span><span>Are your books <strong>clean enough to survive
+                                an audit</strong> right now?</span></div>
+                </div>
+                <p class="pain-bottom">Most ABA clinic owners can't answer a single one. Not because they're not smart —
+                    because their financial tools weren't built for healthcare. <strong>Flychain changes that.</strong>
+                </p>
+                <div style="text-align:center;margin-top:28px">
+                    <a href="#form" class="btn-g"
+                        style="background:linear-gradient(135deg,var(--fc-grad-1),var(--fc-grad-2));display:inline-block;padding:15px 34px;color:#fff;font-family:var(--font-headline);font-size:14px;font-weight:700;border-radius:10px;text-decoration:none;text-transform:uppercase;letter-spacing:.7px;transition:all .25s;box-shadow:0 4px 18px rgba(95,88,255,.28)">Let's
+                        Talk &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="test">
+        <div class="container">
+            <div class="test-grid stagger">
+                <div class="test-card fi">
+                    <p class="test-q">"We used to struggle with our finances. Now we have clarity. We use every part of
+                        Flychain — <strong>they've been hands-on partners in our success.</strong>"</p>
+                    <div class="test-who">
+                        <div class="test-av">TJ</div>
+                        <div>
+                            <div class="test-name">Tammy Jackson</div>
+                            <div class="test-role">Owner, Fun 2B Free Therapy</div>
                         </div>
                     </div>
-                    <p class="form-footer">No cost. No obligation.</p>  
-                </div>  
-            </div>  
-        </div>  
-    </div>  
-</section>  
-  
-<!-- TRUST -->  
-<section class="trust">  
-    <div class="container">  
-        <p class="trust-label">What Our Providers Are Seeing</p>  
-        <div class="trust-stats stagger">  
-            <div class="trust-stat fi"><div class="trust-num">24<span>/7</span></div><div class="trust-desc">AI CFO analyzing your finances in real time</div></div>  
-            <div class="trust-stat fi"><div class="trust-num">10<span>%</span></div><div class="trust-desc">Revenue increase in six months</div></div>  
-            <div class="trust-stat fi"><div class="trust-num">20<span>hrs</span></div><div class="trust-desc">Saved per month, per location</div></div>  
-            <div class="trust-stat fi"><div class="trust-num">$25K<span>/yr</span></div><div class="trust-desc">Average savings per location</div></div>  
-        </div>  
-    </div>  
-</section>  
-  
-<!-- PAIN SECTION -->  
-<section class="pain">  
-    <div class="container">  
-        <div class="pain-inner">  
-            <h2>If You Can't Answer These Questions Right Now, We Should Talk</h2>  
-            <div class="pain-questions">  
-                <div class="pq"><span class="pq-icon">?</span><span>What's your contracted rate for <strong>CPT 97153</strong> — and how does it compare to other providers in your state?</span></div>  
-                <div class="pq"><span class="pq-icon">?</span><span>What's your <strong>profit margin per location</strong>?</span></div>  
-                <div class="pq"><span class="pq-icon">?</span><span>Which payers are reimbursing you the most — and which are <strong>underpaying you</strong>?</span></div>  
-                <div class="pq"><span class="pq-icon">?</span><span>What's your practice actually <strong>worth today</strong>?</span></div>  
-                <div class="pq"><span class="pq-icon">?</span><span>Are your books <strong>clean enough to survive an audit</strong> right now?</span></div>  
-            </div>  
-            <p class="pain-bottom">Most ABA clinic owners can't answer a single one. Not because they're not smart — because their financial tools weren't built for healthcare. <strong>Flychain changes that.</strong></p>  
-            <div style="text-align:center;margin-top:28px">
-                <a href="#form" class="btn-g" style="background:linear-gradient(135deg,var(--fc-grad-1),var(--fc-grad-2));display:inline-block;padding:15px 34px;color:#fff;font-family:var(--font-headline);font-size:14px;font-weight:700;border-radius:10px;text-decoration:none;text-transform:uppercase;letter-spacing:.7px;transition:all .25s;box-shadow:0 4px 18px rgba(95,88,255,.28)">Let's Talk &rarr;</a>
-            </div>  
-        </div>  
-    </div>  
-</section>  
-  
-<!-- TESTIMONIALS -->  
-<section class="test">  
-    <div class="container">  
-        <div class="test-grid stagger">  
-            <div class="test-card fi">  
-                <p class="test-q">"We used to struggle with our finances. Now we have clarity. We use every part of Flychain — <strong>they've been hands-on partners in our success.</strong>"</p>  
-                <div class="test-who"><div class="test-av">TJ</div><div><div class="test-name">Tammy Jackson</div><div class="test-role">Owner, Fun 2B Free Therapy</div></div></div>  
-            </div>  
-            <div class="test-card fi">  
-                <p class="test-q">"Flychain's bookkeepers keep our financials tax-ready — then go further. They've helped me invest, get a valuation, and clean up past messes. <strong>My ABA company is in its best financial shape ever.</strong>"</p>  
-                <div class="test-who"><div class="test-av">CM</div><div><div class="test-name">Charles Marriott</div><div class="test-role">Founder, Autism Care West</div></div></div>  
-            </div>  
-            <div class="test-card fi">  
-                <p class="test-q">"Every time I've requested a new feature — budgeting, benchmarking, banking — <strong>they've not only listened but delivered.</strong> The team is proactive and passionate."</p>  
-                <div class="test-who"><div class="test-av">DA</div><div><div class="test-name">Drew Avery</div><div class="test-role">Owner, Strive Home Care</div></div></div>  
-            </div>  
-        </div>  
-    </div>  
-</section>  
-  
-<!-- PRODUCT DEMO -->
-<section class="demo-section">
-    <div class="container">
-        <div style="text-align:center">
-            <div class="eyebrow eyebrow-d">See The Platform</div>
-            <h2 class="sec-h dark">Take a Quick Tour of Flychain</h2>
+                </div>
+                <div class="test-card fi">
+                    <p class="test-q">"Flychain's bookkeepers keep our financials tax-ready — then go further. They've
+                        helped me invest, get a valuation, and clean up past messes. <strong>My ABA company is in its
+                            best financial shape ever.</strong>"</p>
+                    <div class="test-who">
+                        <div class="test-av">CM</div>
+                        <div>
+                            <div class="test-name">Charles Marriott</div>
+                            <div class="test-role">Founder, Autism Care West</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="test-card fi">
+                    <p class="test-q">"Every time I've requested a new feature — budgeting, benchmarking, banking —
+                        <strong>they've not only listened but delivered.</strong> The team is proactive and passionate."
+                    </p>
+                    <div class="test-who">
+                        <div class="test-av">DA</div>
+                        <div>
+                            <div class="test-name">Drew Avery</div>
+                            <div class="test-role">Owner, Strive Home Care</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="demo-embed">
-            <!--ARCADE EMBED START--><div style="position:relative;padding-bottom:calc(57.6023% + 41px);height:0px;width:100%"><iframe src="https://demo.arcade.software/HMZONZ394y0rfGzrINTN?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Flychain Product Demo" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;color-scheme:light;"></iframe></div><!--ARCADE EMBED END-->
+    </section>
+
+    <!-- PRODUCT DEMO -->
+    <section class="demo-section">
+        <div class="container">
+            <div style="text-align:center">
+                <div class="eyebrow eyebrow-d">See The Platform</div>
+                <h2 class="sec-h dark">Take a Quick Tour of Flychain</h2>
+            </div>
+            <div class="demo-embed">
+                <!--ARCADE EMBED START-->
+                <div style="position:relative;padding-bottom:calc(57.6023% + 41px);height:0px;width:100%"><iframe
+                        src="https://demo.arcade.software/HMZONZ394y0rfGzrINTN?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true"
+                        title="Flychain Product Demo" frameborder="0" loading="lazy" webkitallowfullscreen
+                        mozallowfullscreen allowfullscreen allow="clipboard-write"
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;color-scheme:light;"></iframe>
+                </div><!--ARCADE EMBED END-->
+            </div>
+            <div style="text-align:center;margin-top:32px">
+                <a href="#form" class="btn-g">Book My Free Demo &rarr;</a>
+            </div>
         </div>
-        <div style="text-align:center;margin-top:32px">
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how">
+        <div class="container">
+            <div style="text-align:center">
+                <div class="eyebrow eyebrow-g">How It Works</div>
+                <h2 class="sec-h light">From Messy Books to Financial Clarity in Three Steps</h2>
+            </div>
+            <div class="steps stagger">
+                <div class="step fi">
+                    <div class="step-n">1</div>
+                    <h4>Book a Demo</h4>
+                    <p>30 minutes. We'll look at your current setup — QuickBooks, spreadsheets, whoever's doing your
+                        books now — and show you exactly what Flychain does differently.</p>
+                </div>
+                <div class="step fi">
+                    <div class="step-n">2</div>
+                    <h4>We Onboard You</h4>
+                    <p>Takes 2–3 weeks. We connect to your bank, payroll, and billing systems (no switching anything).
+                        If your books are behind, we catch them up.</p>
+                </div>
+                <div class="step fi">
+                    <div class="step-n">3</div>
+                    <h4>Know Your Numbers</h4>
+                    <p>Clean books every month. Benchmark your CPT rates. See your margins by location. An AI CFO that
+                        spots issues before they become problems. Finally — clarity.</p>
+                </div>
+            </div>
+            <div class="steps-cta">
+                <a href="#form" class="btn-g">Book My Free Demo &rarr;</a>
+                <p class="btn-sub">*Limited spots available each month</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARISON TABLE -->
+    <section class="compare">
+        <div class="container">
+            <div style="text-align:center">
+                <div class="eyebrow eyebrow-d">Why Flychain</div>
+                <h2 class="sec-h dark">See How Your Current Setup Stacks Up</h2>
+            </div>
+            <div class="cmp-table">
+                <div class="cmp-header">
+                    <div class="cmp-feature-label"></div>
+                    <div class="cmp-col-head cmp-col-qb">QuickBooks + Generic Bookkeeper</div>
+                    <div class="cmp-col-head cmp-col-cpa">Separate Tax CPA</div>
+                    <div class="cmp-col-head cmp-col-fc">Flychain</div>
+                </div>
+                <div class="cmp-row">
+                    <div class="cmp-feature">Healthcare-specialized bookkeeping</div>
+                    <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>
+                    <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>
+                    <div class="cmp-cell cmp-yes"><span class="cmp-ck">&#10003;</span></div>
+                </div>
+                <div class="cmp-row">
+                    <div class="cmp-feature">Understands CPT codes &amp; payer mixes</div>
+                    <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>
+                    <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>
+                    <div class="cmp-cell cmp-yes"><span class="cmp-ck">&#10003;</span></div>
+                </div>
+                <div class="cmp-row">
+                    <div class="cmp-feature">Monthly bookkeeping + tax filing in one</div>
+                    <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>
+                    <div class="cmp-cell cmp-partial"><span class="cmp-dash">&ndash;</span> Tax only</div>
+                    <div class="cmp-cell cmp-yes"><span class="cmp-ck">&#10003;</span></div>
+                </div>
+                <div class="cmp-row">
+                    <div class="cmp-feature">CPT rate benchmarking vs. your state</div>
+                    <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>
+                    <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>
+                    <div class="cmp-cell cmp-yes"><span class="cmp-ck">&#10003;</span></div>
+                </div>
+                <div class="cmp-row">
+                    <div class="cmp-feature">Profit margins by location</div>
+                    <div class="cmp-cell cmp-partial"><span class="cmp-dash">&ndash;</span> Manual</div>
+                    <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>
+                    <div class="cmp-cell cmp-yes"><span class="cmp-ck">&#10003;</span></div>
+                </div>
+                <div class="cmp-row">
+                    <div class="cmp-feature">Live practice valuation</div>
+                    <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>
+                    <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>
+                    <div class="cmp-cell cmp-yes"><span class="cmp-ck">&#10003;</span></div>
+                </div>
+                <div class="cmp-row">
+                    <div class="cmp-feature">AI CFO with real-time financial insights</div>
+                    <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>
+                    <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>
+                    <div class="cmp-cell cmp-yes"><span class="cmp-ck">&#10003;</span></div>
+                </div>
+                <div class="cmp-row">
+                    <div class="cmp-feature">Salary &amp; industry benchmarking</div>
+                    <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>
+                    <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>
+                    <div class="cmp-cell cmp-yes"><span class="cmp-ck">&#10003;</span></div>
+                </div>
+                <div class="cmp-row">
+                    <div class="cmp-feature">Cash flow solutions for insurance delays</div>
+                    <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>
+                    <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>
+                    <div class="cmp-cell cmp-yes"><span class="cmp-ck">&#10003;</span></div>
+                </div>
+                <div class="cmp-row">
+                    <div class="cmp-feature">Catch-up bookkeeping included</div>
+                    <div class="cmp-cell cmp-partial"><span class="cmp-dash">&ndash;</span> Extra $$</div>
+                    <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>
+                    <div class="cmp-cell cmp-yes"><span class="cmp-ck">&#10003;</span></div>
+                </div>
+                <div class="cmp-row cmp-row-last">
+                    <div class="cmp-feature">Multi-location consolidated view</div>
+                    <div class="cmp-cell cmp-partial"><span class="cmp-dash">&ndash;</span> Clunky</div>
+                    <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>
+                    <div class="cmp-cell cmp-yes"><span class="cmp-ck">&#10003;</span></div>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:36px">
+                <a href="#form" class="btn-g">Book My Free Demo &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MORE PROOF -->
+    <section class="proof">
+        <div class="container">
+            <div style="text-align:center">
+                <div class="eyebrow eyebrow-d">From Owners Like You</div>
+                <h2 class="sec-h dark">They Switched. Here's What Happened.</h2>
+            </div>
+            <div class="proof-cards stagger">
+                <div class="pc fi">
+                    <p class="pc-q">"I was reluctant to switch from QBO and a third-party bookkeeper, but <strong>we
+                            clearly made the right choice.</strong> Their platform and bookkeeping service are second to
+                        none."</p>
+                    <div class="pc-who">
+                        <div class="pc-av">TC</div>
+                        <div>
+                            <div class="pc-name">Thomas Chibucos</div>
+                            <div class="pc-org">Pediatric Therapy Network</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pc fi">
+                    <p class="pc-q">"QuickBooks was fine for accounting but <strong>did little for analytics.</strong>
+                        The best part about Flychain has been their customer service and willingness to build tools that
+                        help us succeed."</p>
+                    <div class="pc-who">
+                        <div class="pc-av">DK</div>
+                        <div>
+                            <div class="pc-name">Daniel Kurty</div>
+                            <div class="pc-org">Wild Sun Behavioral Services</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pc fi">
+                    <p class="pc-q">"They helped cut overspending, smooth out our cash flow, and conduct a contracted
+                        rate analysis. <strong>Flychain has been a game-changer for us.</strong>"</p>
+                    <div class="pc-who">
+                        <div class="pc-av">OO</div>
+                        <div>
+                            <div class="pc-name">Ooshie Oldham</div>
+                            <div class="pc-org">Pinnacle Autism Therapy</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final">
+        <div class="container">
+            <h2>You Opened a Clinic to Help Kids — <em>Not to Reconcile Bank Statements.</em></h2>
+            <p>Get the financial clarity your practice deserves. One platform. Healthcare-specialized. Ready when you
+                are.</p>
             <a href="#form" class="btn-g">Book My Free Demo &rarr;</a>
+            <p class="btn-sub" style="margin-top:10px">No cost. No obligation.</p>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- HOW IT WORKS -->  
-<section class="how">  
-    <div class="container">  
-        <div style="text-align:center">  
-            <div class="eyebrow eyebrow-g">How It Works</div>  
-            <h2 class="sec-h light">From Messy Books to Financial Clarity in Three Steps</h2>  
-        </div>  
-        <div class="steps stagger">  
-            <div class="step fi">  
-                <div class="step-n">1</div>  
-                <h4>Book a Demo</h4>  
-                <p>30 minutes. We'll look at your current setup — QuickBooks, spreadsheets, whoever's doing your books now — and show you exactly what Flychain does differently.</p>  
-            </div>  
-            <div class="step fi">  
-                <div class="step-n">2</div>  
-                <h4>We Onboard You</h4>  
-                <p>Takes 2–3 weeks. We connect to your bank, payroll, and billing systems (no switching anything). If your books are behind, we catch them up.</p>  
-            </div>  
-            <div class="step fi">  
-                <div class="step-n">3</div>  
-                <h4>Know Your Numbers</h4>  
-                <p>Clean books every month. Benchmark your CPT rates. See your margins by location. An AI CFO that spots issues before they become problems. Finally — clarity.</p>  
-            </div>  
-        </div>  
-        <div class="steps-cta">  
-            <a href="#form" class="btn-g">Book My Free Demo &rarr;</a>  
-            <p class="btn-sub">*Limited spots available each month</p>  
-        </div>  
-    </div>  
-</section>  
-  
-<!-- COMPARISON TABLE -->  
-<section class="compare">  
-    <div class="container">  
-        <div style="text-align:center">  
-            <div class="eyebrow eyebrow-d">Why Flychain</div>  
-            <h2 class="sec-h dark">See How Your Current Setup Stacks Up</h2>  
-        </div>  
-        <div class="cmp-table">  
-            <div class="cmp-header">  
-                <div class="cmp-feature-label"></div>  
-                <div class="cmp-col-head cmp-col-qb">QuickBooks + Generic Bookkeeper</div>  
-                <div class="cmp-col-head cmp-col-cpa">Separate Tax CPA</div>  
-                <div class="cmp-col-head cmp-col-fc">Flychain</div>  
-            </div>  
-            <div class="cmp-row">  
-                <div class="cmp-feature">Healthcare-specialized bookkeeping</div>  
-                <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>  
-                <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>  
-                <div class="cmp-cell cmp-yes"><span class="cmp-ck">&#10003;</span></div>  
-            </div>  
-            <div class="cmp-row">  
-                <div class="cmp-feature">Understands CPT codes &amp; payer mixes</div>  
-                <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>  
-                <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>  
-                <div class="cmp-cell cmp-yes"><span class="cmp-ck">&#10003;</span></div>  
-            </div>  
-            <div class="cmp-row">  
-                <div class="cmp-feature">Monthly bookkeeping + tax filing in one</div>  
-                <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>  
-                <div class="cmp-cell cmp-partial"><span class="cmp-dash">&ndash;</span> Tax only</div>  
-                <div class="cmp-cell cmp-yes"><span class="cmp-ck">&#10003;</span></div>  
-            </div>  
-            <div class="cmp-row">  
-                <div class="cmp-feature">CPT rate benchmarking vs. your state</div>  
-                <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>  
-                <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>  
-                <div class="cmp-cell cmp-yes"><span class="cmp-ck">&#10003;</span></div>  
-            </div>  
-            <div class="cmp-row">  
-                <div class="cmp-feature">Profit margins by location</div>  
-                <div class="cmp-cell cmp-partial"><span class="cmp-dash">&ndash;</span> Manual</div>  
-                <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>  
-                <div class="cmp-cell cmp-yes"><span class="cmp-ck">&#10003;</span></div>  
-            </div>  
-            <div class="cmp-row">  
-                <div class="cmp-feature">Live practice valuation</div>  
-                <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>  
-                <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>  
-                <div class="cmp-cell cmp-yes"><span class="cmp-ck">&#10003;</span></div>  
-            </div>  
-            <div class="cmp-row">  
-                <div class="cmp-feature">AI CFO with real-time financial insights</div>  
-                <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>  
-                <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>  
-                <div class="cmp-cell cmp-yes"><span class="cmp-ck">&#10003;</span></div>  
-            </div>  
-            <div class="cmp-row">  
-                <div class="cmp-feature">Salary &amp; industry benchmarking</div>  
-                <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>  
-                <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>  
-                <div class="cmp-cell cmp-yes"><span class="cmp-ck">&#10003;</span></div>  
-            </div>  
-            <div class="cmp-row">  
-                <div class="cmp-feature">Cash flow solutions for insurance delays</div>  
-                <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>  
-                <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>  
-                <div class="cmp-cell cmp-yes"><span class="cmp-ck">&#10003;</span></div>  
-            </div>  
-            <div class="cmp-row">  
-                <div class="cmp-feature">Catch-up bookkeeping included</div>  
-                <div class="cmp-cell cmp-partial"><span class="cmp-dash">&ndash;</span> Extra $$</div>  
-                <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>  
-                <div class="cmp-cell cmp-yes"><span class="cmp-ck">&#10003;</span></div>  
-            </div>  
-            <div class="cmp-row cmp-row-last">  
-                <div class="cmp-feature">Multi-location consolidated view</div>  
-                <div class="cmp-cell cmp-partial"><span class="cmp-dash">&ndash;</span> Clunky</div>  
-                <div class="cmp-cell cmp-no"><span class="cmp-x">&times;</span></div>  
-                <div class="cmp-cell cmp-yes"><span class="cmp-ck">&#10003;</span></div>  
-            </div>  
-        </div>  
-        <div style="text-align:center;margin-top:36px">  
-            <a href="#form" class="btn-g">Book My Free Demo &rarr;</a>  
-        </div>  
-    </div>  
-</section>  
-  
-<!-- MORE PROOF -->  
-<section class="proof">  
-    <div class="container">  
-        <div style="text-align:center">  
-            <div class="eyebrow eyebrow-d">From Owners Like You</div>  
-            <h2 class="sec-h dark">They Switched. Here's What Happened.</h2>  
-        </div>  
-        <div class="proof-cards stagger">  
-            <div class="pc fi">  
-                <p class="pc-q">"I was reluctant to switch from QBO and a third-party bookkeeper, but <strong>we clearly made the right choice.</strong> Their platform and bookkeeping service are second to none."</p>  
-                <div class="pc-who"><div class="pc-av">TC</div><div><div class="pc-name">Thomas Chibucos</div><div class="pc-org">Pediatric Therapy Network</div></div></div>  
-            </div>  
-            <div class="pc fi">  
-                <p class="pc-q">"QuickBooks was fine for accounting but <strong>did little for analytics.</strong> The best part about Flychain has been their customer service and willingness to build tools that help us succeed."</p>  
-                <div class="pc-who"><div class="pc-av">DK</div><div><div class="pc-name">Daniel Kurty</div><div class="pc-org">Wild Sun Behavioral Services</div></div></div>  
-            </div>  
-            <div class="pc fi">  
-                <p class="pc-q">"They helped cut overspending, smooth out our cash flow, and conduct a contracted rate analysis. <strong>Flychain has been a game-changer for us.</strong>"</p>  
-                <div class="pc-who"><div class="pc-av">OO</div><div><div class="pc-name">Ooshie Oldham</div><div class="pc-org">Pinnacle Autism Therapy</div></div></div>  
-            </div>  
-        </div>  
-    </div>  
-</section>  
-  
-<!-- FINAL CTA -->  
-<section class="final">  
-    <div class="container">  
-        <h2>You Opened a Clinic to Help Kids — <em>Not to Reconcile Bank Statements.</em></h2>  
-        <p>Get the financial clarity your practice deserves. One platform. Healthcare-specialized. Ready when you are.</p>  
-        <a href="#form" class="btn-g">Book My Free Demo &rarr;</a>  
-        <p class="btn-sub" style="margin-top:10px">No cost. No obligation.</p>  
-    </div>  
-</section>  
-  
-<!-- FOOTER -->  
-<footer class="footer">  
-    <div class="container">  
-        <div class="footer-logo">  
-            <svg viewBox="0 0 1080 273" fill="none" xmlns="http://www.w3.org/2000/svg" style="height:22px;width:auto;opacity:.4">
-                <path d="M0 50.4516C0 22.588 22.5879 0 50.4516 0H221.681C249.545 0 272.133 22.5879 272.133 50.4516V221.681C272.133 249.545 249.545 272.133 221.681 272.133H50.4516C22.588 272.133 0 249.545 0 221.681V50.4516Z" fill="url(#paint0_footer)"/>
-                <path d="M140.711 50.4517H132.083C107.313 50.4517 87.1443 70.6205 87.1443 95.3906V149.379H108.195V124.072H136.071V103.021H108.195V95.3906C108.195 82.2003 118.931 71.5024 132.083 71.5024H140.711C153.901 71.5024 164.637 82.2387 164.637 95.659V149.417H185.688V95.4289C185.649 70.6205 165.481 50.4517 140.711 50.4517Z" fill="#FCFBF7"/>
-                <path d="M164.637 177.139C164.637 190.33 153.901 201.027 140.711 201.027H132.083C118.893 201.027 108.195 190.291 108.195 177.139V160.46H87.1443V177.139C87.1443 201.909 107.313 222.078 132.083 222.078H140.711C165.481 222.078 185.649 201.909 185.649 177.139V160.46H164.599V177.139H164.637Z" fill="#FCFBF7"/>
-                <path d="M464.806 90.0135H399.074C397.558 90.0135 396.367 91.2047 396.367 92.7208V119.793C396.367 121.309 397.558 122.5 399.074 122.5H458.417C459.933 122.5 461.124 123.692 461.124 125.208V142.209C461.124 143.725 459.933 144.916 458.417 144.916H399.074C397.558 144.916 396.367 146.108 396.367 147.624V201.552C396.367 203.068 395.175 204.259 393.659 204.259H372.976C371.46 204.259 370.269 203.068 370.269 201.552V69.3302C370.269 67.8141 371.568 66.6229 372.976 66.6229H464.806C466.322 66.6229 467.513 67.8141 467.513 69.3302V87.3063C467.513 88.8223 466.322 90.0135 464.806 90.0135Z" fill="#FFFFFF"/>
-                <path d="M479.64 201.552V69.3303C479.64 67.8142 480.94 66.623 482.348 66.623H501.298C502.814 66.623 504.006 67.8142 504.006 69.3303V201.552C504.006 203.068 502.706 204.259 501.298 204.259H482.348C480.832 204.259 479.64 203.068 479.64 201.552Z" fill="#FFFFFF"/>
-                <path d="M593.236 104.525H613.053C614.894 104.525 616.194 106.365 615.544 108.098L578.292 212.381C569.954 234.797 559.342 242.377 535.41 242.377C532.378 242.377 529.67 242.377 527.288 242.053C525.88 241.944 524.797 240.753 524.797 239.345V225.268C524.797 223.752 525.988 222.56 527.505 222.56H534.11C545.156 222.56 550.57 215.846 550.57 206.534C550.57 201.877 549.054 195.163 545.914 186.392L518.192 107.99C517.542 106.257 518.841 104.416 520.682 104.416H541.257C542.449 104.416 543.423 105.174 543.856 106.257L551.328 129.323C556.31 144.808 560.641 160.077 564.648 175.238C565.298 177.837 569.088 177.945 569.846 175.238C573.636 161.702 578.184 146.324 583.274 129.431L590.746 106.149C591.071 105.066 592.154 104.308 593.345 104.308L593.236 104.525Z" fill="#FFFFFF"/>
-                <path d="M822.921 138.311V201.769C822.921 203.285 821.729 204.476 820.213 204.476H801.263C799.747 204.476 798.555 203.285 798.555 201.769V142.426C798.555 132.572 790.975 124.017 781.229 123.475C768.884 122.826 757.622 131.489 757.622 148.599V201.769C757.622 203.285 756.431 204.476 754.915 204.476H735.964C734.448 204.476 733.257 203.285 733.257 201.769V69.4388C733.257 67.9228 734.448 66.7316 735.964 66.7316H754.915C756.431 66.7316 757.622 67.9228 757.622 69.4388V117.953C765.202 107.557 775.381 102.251 787.943 102.251C809.384 102.251 822.921 115.029 822.921 138.203V138.311Z" fill="#FFFFFF"/>
-                <path d="M908.144 203.068C907.169 200.686 906.519 197.004 906.086 192.239C899.264 201.877 888.435 206.75 874.033 206.75C852.375 206.75 838.08 195.921 838.08 176.754C838.08 157.586 850.859 148.165 876.415 145.675L891.467 144.375C901.322 143.076 905.545 140.152 905.545 133.005C905.545 124.666 900.672 120.66 887.352 120.66C874.033 120.66 868.401 124.233 866.885 134.304C866.669 135.604 865.586 136.578 864.178 136.578H845.552C843.928 136.578 842.628 135.17 842.845 133.654C845.336 112.971 860.28 102.575 887.46 102.575C915.074 102.575 929.044 112.646 929.044 132.571V185.742C929.044 192.564 929.802 197.978 931.534 201.769C932.076 203.176 931.21 204.692 929.693 204.692H910.093C909.227 204.692 908.469 204.151 908.144 203.393V203.068ZM905.545 164.95V155.854C903.271 158.02 899.372 159.319 894.174 159.86L881.071 161.377C867.968 162.893 863.095 167.332 863.095 175.671C863.095 184.009 868.943 189.207 879.88 189.207C894.391 189.207 905.545 181.085 905.545 164.842V164.95Z" fill="#FFFFFF"/>
-                <path d="M947.021 201.769V107.449C947.021 105.932 948.212 104.741 949.728 104.741H968.679C970.195 104.741 971.386 105.932 971.386 107.449V201.769C971.386 203.285 970.195 204.476 968.679 204.476H949.728C948.212 204.476 947.021 203.285 947.021 201.769ZM947.238 89.0392V71.6046C947.238 70.0885 948.429 68.8973 949.945 68.8973H968.571C970.087 68.8973 971.278 70.0885 971.278 71.6046V89.0392C971.278 90.5553 970.087 91.7465 968.571 91.7465H949.945C948.429 91.7465 947.238 90.5553 947.238 89.0392Z" fill="#FFFFFF"/>
-                <path d="M1080 138.419V201.877C1080 203.393 1078.81 204.584 1077.29 204.584H1058.34C1056.83 204.584 1055.63 203.393 1055.63 201.877V142.534C1055.63 132.68 1048.05 124.125 1038.31 123.583C1025.96 122.934 1014.7 131.597 1014.7 148.707V201.877C1014.7 203.393 1013.51 204.584 1011.99 204.584H993.043C991.527 204.584 990.336 203.393 990.336 201.877V107.34C990.336 105.824 991.527 104.633 993.043 104.633H1011.24C1012.75 104.633 1013.94 105.824 1013.94 107.34V118.927C1021.52 107.881 1031.7 102.359 1045.02 102.359C1066.46 102.359 1080 115.137 1080 138.311V138.419Z" fill="#FFFFFF"/>
-                <path d="M621.069 155.746C621.069 124.45 639.586 101.926 671.857 101.926C697.955 101.926 715.606 116.328 719.396 139.177C719.612 140.369 718.638 141.343 717.447 141.343H696.005C695.139 141.343 694.381 140.693 694.164 139.827C691.349 128.673 683.011 122.717 671.748 122.717C656.371 122.717 646.625 133.871 646.625 155.637C646.625 177.404 656.588 188.557 671.748 188.557C683.227 188.557 692.323 182.277 694.598 170.365C694.814 169.498 695.572 168.74 696.438 168.74H717.772C718.963 168.74 719.829 169.715 719.721 170.906C716.255 194.622 697.521 209.457 671.748 209.457C639.695 209.457 620.96 186.717 620.96 155.637L621.069 155.746Z" fill="#FFFFFF"/>
-                <defs><linearGradient id="paint0_footer" x1="-24.2957" y1="310.604" x2="272.493" y2="-29.0596" gradientUnits="userSpaceOnUse"><stop stop-color="#5F58FF"/><stop offset="1" stop-color="#8D58FF"/></linearGradient></defs>
-            </svg>
-        </div>  
-        <p>&copy; 2026 <a href="https://flychain.us">Flychain</a>. All rights reserved.</p>  
-        <p style="margin-top:4px">This site is not a part of the Facebook&trade; website or Facebook&trade; Inc. This site is NOT endorsed by Facebook&trade; in any way. FACEBOOK&trade; is a trademark of META&trade; Platforms, Inc.</p>  
-        <p style="margin-top:4px"><a href="https://flychain.us/legal/privacy-policy">Privacy Policy</a> &middot; <a href="https://flychain.us/legal/terms-of-use">Terms & Conditions</a></p>  
-    </div>  
-</footer>  
-  
-<script>  
-const nb=document.getElementById('navbar');  
-window.addEventListener('scroll',()=>nb.classList.toggle('scrolled',window.scrollY>40));  
-const ob=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('v')}),{threshold:.15,rootMargin:'0px 0px -30px 0px'});  
-document.querySelectorAll('.fi').forEach(el=>ob.observe(el));  
-document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'})}));  
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <svg viewBox="0 0 1080 273" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    style="height:22px;width:auto;opacity:.4">
+                    <path
+                        d="M0 50.4516C0 22.588 22.5879 0 50.4516 0H221.681C249.545 0 272.133 22.5879 272.133 50.4516V221.681C272.133 249.545 249.545 272.133 221.681 272.133H50.4516C22.588 272.133 0 249.545 0 221.681V50.4516Z"
+                        fill="url(#paint0_footer)" />
+                    <path
+                        d="M140.711 50.4517H132.083C107.313 50.4517 87.1443 70.6205 87.1443 95.3906V149.379H108.195V124.072H136.071V103.021H108.195V95.3906C108.195 82.2003 118.931 71.5024 132.083 71.5024H140.711C153.901 71.5024 164.637 82.2387 164.637 95.659V149.417H185.688V95.4289C185.649 70.6205 165.481 50.4517 140.711 50.4517Z"
+                        fill="#FCFBF7" />
+                    <path
+                        d="M164.637 177.139C164.637 190.33 153.901 201.027 140.711 201.027H132.083C118.893 201.027 108.195 190.291 108.195 177.139V160.46H87.1443V177.139C87.1443 201.909 107.313 222.078 132.083 222.078H140.711C165.481 222.078 185.649 201.909 185.649 177.139V160.46H164.599V177.139H164.637Z"
+                        fill="#FCFBF7" />
+                    <path
+                        d="M464.806 90.0135H399.074C397.558 90.0135 396.367 91.2047 396.367 92.7208V119.793C396.367 121.309 397.558 122.5 399.074 122.5H458.417C459.933 122.5 461.124 123.692 461.124 125.208V142.209C461.124 143.725 459.933 144.916 458.417 144.916H399.074C397.558 144.916 396.367 146.108 396.367 147.624V201.552C396.367 203.068 395.175 204.259 393.659 204.259H372.976C371.46 204.259 370.269 203.068 370.269 201.552V69.3302C370.269 67.8141 371.568 66.6229 372.976 66.6229H464.806C466.322 66.6229 467.513 67.8141 467.513 69.3302V87.3063C467.513 88.8223 466.322 90.0135 464.806 90.0135Z"
+                        fill="#FFFFFF" />
+                    <path
+                        d="M479.64 201.552V69.3303C479.64 67.8142 480.94 66.623 482.348 66.623H501.298C502.814 66.623 504.006 67.8142 504.006 69.3303V201.552C504.006 203.068 502.706 204.259 501.298 204.259H482.348C480.832 204.259 479.64 203.068 479.64 201.552Z"
+                        fill="#FFFFFF" />
+                    <path
+                        d="M593.236 104.525H613.053C614.894 104.525 616.194 106.365 615.544 108.098L578.292 212.381C569.954 234.797 559.342 242.377 535.41 242.377C532.378 242.377 529.67 242.377 527.288 242.053C525.88 241.944 524.797 240.753 524.797 239.345V225.268C524.797 223.752 525.988 222.56 527.505 222.56H534.11C545.156 222.56 550.57 215.846 550.57 206.534C550.57 201.877 549.054 195.163 545.914 186.392L518.192 107.99C517.542 106.257 518.841 104.416 520.682 104.416H541.257C542.449 104.416 543.423 105.174 543.856 106.257L551.328 129.323C556.31 144.808 560.641 160.077 564.648 175.238C565.298 177.837 569.088 177.945 569.846 175.238C573.636 161.702 578.184 146.324 583.274 129.431L590.746 106.149C591.071 105.066 592.154 104.308 593.345 104.308L593.236 104.525Z"
+                        fill="#FFFFFF" />
+                    <path
+                        d="M822.921 138.311V201.769C822.921 203.285 821.729 204.476 820.213 204.476H801.263C799.747 204.476 798.555 203.285 798.555 201.769V142.426C798.555 132.572 790.975 124.017 781.229 123.475C768.884 122.826 757.622 131.489 757.622 148.599V201.769C757.622 203.285 756.431 204.476 754.915 204.476H735.964C734.448 204.476 733.257 203.285 733.257 201.769V69.4388C733.257 67.9228 734.448 66.7316 735.964 66.7316H754.915C756.431 66.7316 757.622 67.9228 757.622 69.4388V117.953C765.202 107.557 775.381 102.251 787.943 102.251C809.384 102.251 822.921 115.029 822.921 138.203V138.311Z"
+                        fill="#FFFFFF" />
+                    <path
+                        d="M908.144 203.068C907.169 200.686 906.519 197.004 906.086 192.239C899.264 201.877 888.435 206.75 874.033 206.75C852.375 206.75 838.08 195.921 838.08 176.754C838.08 157.586 850.859 148.165 876.415 145.675L891.467 144.375C901.322 143.076 905.545 140.152 905.545 133.005C905.545 124.666 900.672 120.66 887.352 120.66C874.033 120.66 868.401 124.233 866.885 134.304C866.669 135.604 865.586 136.578 864.178 136.578H845.552C843.928 136.578 842.628 135.17 842.845 133.654C845.336 112.971 860.28 102.575 887.46 102.575C915.074 102.575 929.044 112.646 929.044 132.571V185.742C929.044 192.564 929.802 197.978 931.534 201.769C932.076 203.176 931.21 204.692 929.693 204.692H910.093C909.227 204.692 908.469 204.151 908.144 203.393V203.068ZM905.545 164.95V155.854C903.271 158.02 899.372 159.319 894.174 159.86L881.071 161.377C867.968 162.893 863.095 167.332 863.095 175.671C863.095 184.009 868.943 189.207 879.88 189.207C894.391 189.207 905.545 181.085 905.545 164.842V164.95Z"
+                        fill="#FFFFFF" />
+                    <path
+                        d="M947.021 201.769V107.449C947.021 105.932 948.212 104.741 949.728 104.741H968.679C970.195 104.741 971.386 105.932 971.386 107.449V201.769C971.386 203.285 970.195 204.476 968.679 204.476H949.728C948.212 204.476 947.021 203.285 947.021 201.769ZM947.238 89.0392V71.6046C947.238 70.0885 948.429 68.8973 949.945 68.8973H968.571C970.087 68.8973 971.278 70.0885 971.278 71.6046V89.0392C971.278 90.5553 970.087 91.7465 968.571 91.7465H949.945C948.429 91.7465 947.238 90.5553 947.238 89.0392Z"
+                        fill="#FFFFFF" />
+                    <path
+                        d="M1080 138.419V201.877C1080 203.393 1078.81 204.584 1077.29 204.584H1058.34C1056.83 204.584 1055.63 203.393 1055.63 201.877V142.534C1055.63 132.68 1048.05 124.125 1038.31 123.583C1025.96 122.934 1014.7 131.597 1014.7 148.707V201.877C1014.7 203.393 1013.51 204.584 1011.99 204.584H993.043C991.527 204.584 990.336 203.393 990.336 201.877V107.34C990.336 105.824 991.527 104.633 993.043 104.633H1011.24C1012.75 104.633 1013.94 105.824 1013.94 107.34V118.927C1021.52 107.881 1031.7 102.359 1045.02 102.359C1066.46 102.359 1080 115.137 1080 138.311V138.419Z"
+                        fill="#FFFFFF" />
+                    <path
+                        d="M621.069 155.746C621.069 124.45 639.586 101.926 671.857 101.926C697.955 101.926 715.606 116.328 719.396 139.177C719.612 140.369 718.638 141.343 717.447 141.343H696.005C695.139 141.343 694.381 140.693 694.164 139.827C691.349 128.673 683.011 122.717 671.748 122.717C656.371 122.717 646.625 133.871 646.625 155.637C646.625 177.404 656.588 188.557 671.748 188.557C683.227 188.557 692.323 182.277 694.598 170.365C694.814 169.498 695.572 168.74 696.438 168.74H717.772C718.963 168.74 719.829 169.715 719.721 170.906C716.255 194.622 697.521 209.457 671.748 209.457C639.695 209.457 620.96 186.717 620.96 155.637L621.069 155.746Z"
+                        fill="#FFFFFF" />
+                    <defs>
+                        <linearGradient id="paint0_footer" x1="-24.2957" y1="310.604" x2="272.493" y2="-29.0596"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#5F58FF" />
+                            <stop offset="1" stop-color="#8D58FF" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <p>&copy; 2026 <a href="https://flychain.us">Flychain</a>. All rights reserved.</p>
+            <p style="margin-top:4px">This site is not a part of the Facebook&trade; website or Facebook&trade; Inc.
+                This site is NOT endorsed by Facebook&trade; in any way. FACEBOOK&trade; is a trademark of META&trade;
+                Platforms, Inc.</p>
+            <p style="margin-top:4px"><a href="https://flychain.us/legal/privacy-policy">Privacy Policy</a> &middot; <a
+                    href="https://flychain.us/legal/terms-of-use">Terms & Conditions</a></p>
+        </div>
+    </footer>
 
-// Quiz funnel logic
-const quizData = {};
+    <script>
+        const nb = document.getElementById('navbar');
+        window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 40));
+        const ob = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) x.target.classList.add('v') }), { threshold: .15, rootMargin: '0px 0px -30px 0px' });
+        document.querySelectorAll('.fi').forEach(el => ob.observe(el));
+        document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); const t = document.querySelector(a.getAttribute('href')); if (t) window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' }) }));
 
-// Animate first step in on load
-requestAnimationFrame(() => {
-    const first = document.getElementById('step-1');
-    if (first) requestAnimationFrame(() => first.classList.add('visible'));
-});
+        // Quiz funnel logic
+        const quizData = {};
 
-function selectOpt(btn) {
-    const field = btn.dataset.field;
-    const value = btn.dataset.value;
-    quizData[field] = value;
-    
-    // Visual feedback
-    btn.parentElement.querySelectorAll('.quiz-opt').forEach(b => b.classList.remove('selected'));
-    btn.classList.add('selected');
-    
-    // Animate transition after short delay
-    setTimeout(() => {
-        const currentStep = btn.closest('.quiz-step');
-        const stepNum = currentStep.id.split('-')[1];
-        const nextStep = document.getElementById('step-' + (parseInt(stepNum) + 1));
-        
-        if (nextStep) {
-            // Slide current step out
-            currentStep.classList.add('exiting');
-            currentStep.classList.remove('visible');
-            
+        // Animate first step in on load
+        requestAnimationFrame(() => {
+            const first = document.getElementById('step-1');
+            if (first) requestAnimationFrame(() => first.classList.add('visible'));
+        });
+
+        function selectOpt(btn) {
+            const field = btn.dataset.field;
+            const value = btn.dataset.value;
+            quizData[field] = value;
+
+            // Meta/FB Pixel Custom Event Tracking for quiz drop-offs
+            if (typeof fbq === 'function') {
+                fbq('trackCustom', 'QuizStepSelected', { step_name: field, selected_value: value });
+            }
+
+            // Visual feedback
+            btn.parentElement.querySelectorAll('.quiz-opt').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+
+            // Animate transition after short delay
             setTimeout(() => {
-                currentStep.removeAttribute('data-active');
-                currentStep.classList.remove('exiting');
-                
-                // Populate hidden fields
-                if (quizData.specialty) document.getElementById('hf-specialty').value = quizData.specialty;
-                if (quizData.pain) document.getElementById('hf-pain').value = quizData.pain;
-                
-                // Slide next step in
-                nextStep.setAttribute('data-active', 'true');
-                requestAnimationFrame(() => {
-                    requestAnimationFrame(() => nextStep.classList.add('visible'));
+                const currentStep = btn.closest('.quiz-step');
+                const stepNum = currentStep.id.split('-')[1];
+                const nextStep = document.getElementById('step-' + (parseInt(stepNum) + 1));
+
+                if (nextStep) {
+                    // Slide current step out
+                    currentStep.classList.add('exiting');
+                    currentStep.classList.remove('visible');
+
+                    setTimeout(() => {
+                        currentStep.removeAttribute('data-active');
+                        currentStep.classList.remove('exiting');
+
+                        // Populate hidden fields
+                        if (quizData.specialty) document.getElementById('hf-specialty').value = quizData.specialty;
+                        if (quizData.pain) document.getElementById('hf-pain').value = quizData.pain;
+                        if (quizData.revenue) document.getElementById('hf-revenue').value = quizData.revenue;
+
+                        // Slide next step in
+                        nextStep.setAttribute('data-active', 'true');
+                        requestAnimationFrame(() => {
+                            requestAnimationFrame(() => nextStep.classList.add('visible'));
+                        });
+                    }, 250);
+                }
+            }, 350);
+        }
+
+        document.getElementById('demo-form').addEventListener('submit', async e => {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            const params = new URLSearchParams(formData);
+
+            const submitBtn = form.querySelector('.cta-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Booking...';
+            submitBtn.style.pointerEvents = 'none';
+
+            // Extract fields
+            const email = formData.get('email') || '';
+            const phone = formData.get('phone') || '';
+            const fullName = formData.get('name') || '';
+            const specialty = formData.get('specialty') || '';
+            const pain = formData.get('pain') || '';
+            const revenue = formData.get('revenue') || '';
+
+            // Split Name
+            let firstName = fullName;
+            let lastName = '';
+            const nameParts = fullName.trim().split(' ');
+            if (nameParts.length > 1) {
+                firstName = nameParts[0];
+                lastName = nameParts.slice(1).join(' ');
+            }
+
+            // 1. Facebook Advanced Matching & Lead Event
+            if (typeof fbq === 'function') {
+                fbq('init', '897644829617517', {
+                    em: email.trim().toLowerCase(),
+                    ph: phone.replace(/\\D/g, ''),
+                    fn: firstName.trim().toLowerCase(),
+                    ln: lastName.trim().toLowerCase()
                 });
-            }, 250);
-        }
-    }, 350);
-}
+                fbq('track', 'Lead', {
+                    content_name: 'Quiz Form Completed',
+                    content_category: specialty,
+                    pain_point: pain,
+                    revenue_tier: revenue
+                });
+            }
 
-document.getElementById('demo-form').addEventListener('submit', async e => {
-    e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
-    const params = new URLSearchParams(formData);
+            // 2. Submit to HubSpot API
+            // IMPORTANT: Replace these two strings with your actual HubSpot Portal ID & Form GUID
+            const HUBSPOT_PORTAL_ID = '24481327';
+            const HUBSPOT_FORM_GUID = '2d6838bd-0a07-4ffe-ac26-682b206254dd';
 
-    const submitBtn = form.querySelector('.cta-btn');
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Booking...';
-    submitBtn.style.pointerEvents = 'none';
+            if (HUBSPOT_PORTAL_ID && HUBSPOT_PORTAL_ID !== 'YOUR_PORTAL_ID_HERE') {
+                try {
+                    // Extract HubSpot tracking cookie to link web activity (from hs-scripts) to the new contact
+                    const hutk = document.cookie.replace(/(?:(?:^|.*;\s*)hubspotutk\s*\=\s*([^;]*).*$)|^.*$/, "$1") || undefined;
 
-    // Extract fields
-    const email = formData.get('email') || '';
-    const phone = formData.get('phone') || '';
-    const fullName = formData.get('name') || '';
-    const specialty = formData.get('specialty') || '';
-    const pain = formData.get('pain') || '';
+                    await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_GUID}`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            fields: [
+                                { name: 'email', value: email },
+                                { name: 'firstname', value: firstName },
+                                { name: 'lastname', value: lastName },
+                                { name: 'phone', value: phone },
+                                { name: 'specialty', value: specialty },
+                                { name: 'pain_point', value: pain },
+                                { name: 'annualrevenue', value: revenue }
+                            ],
+                            context: {
+                                hutk: hutk,
+                                pageUri: window.location.href,
+                                pageName: document.title
+                            }
+                        })
+                    });
+                } catch (error) {
+                    console.error('HubSpot submission failed', error);
+                }
+            } else {
+                // Small artificial delay if skipping Hubspot so the FB event has time to fire
+                await new Promise(r => setTimeout(r, 200));
+            }
 
-    // Split Name
-    let firstName = fullName;
-    let lastName = '';
-    const nameParts = fullName.trim().split(' ');
-    if (nameParts.length > 1) {
-        firstName = nameParts[0];
-        lastName = nameParts.slice(1).join(' ');
-    }
-
-    // 1. Facebook Advanced Matching & Lead Event
-    if (typeof fbq === 'function') {
-        fbq('init', '897644829617517', {
-            em: email.trim().toLowerCase(),
-            ph: phone.replace(/\\D/g, ''),
-            fn: firstName.trim().toLowerCase(),
-            ln: lastName.trim().toLowerCase()
+            // 3. Redirect back to standard contact page with parameters intact
+            window.location.href = 'https://flychain.us/contact?' + params.toString();
         });
-        fbq('track', 'Lead', {
-            content_name: 'Quiz Form Completed',
-            content_category: specialty,
-            pain_point: pain
-        });
-    }
+    </script>
 
-    // 2. Submit to HubSpot API
-    // IMPORTANT: Replace these two strings with your actual HubSpot Portal ID & Form GUID
-    const HUBSPOT_PORTAL_ID = 'YOUR_PORTAL_ID_HERE'; 
-    const HUBSPOT_FORM_GUID = 'YOUR_FORM_GUID_HERE';
+    <!-- HubSpot Analytics Tracking Code -->
+    <!-- IMPORTANT: Replace YOUR_PORTAL_ID_HERE with your HubSpot Portal ID -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/24481327.js"></script>
 
-    if (HUBSPOT_PORTAL_ID && HUBSPOT_PORTAL_ID !== 'YOUR_PORTAL_ID_HERE') {
-        try {
-            await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_GUID}`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    fields: [
-                        { name: 'email', value: email },
-                        { name: 'firstname', value: firstName },
-                        { name: 'lastname', value: lastName },
-                        { name: 'phone', value: phone },
-                        { name: 'specialty', value: specialty },
-                        { name: 'pain_point', value: pain }
-                    ],
-                    context: {
-                        pageUri: window.location.href,
-                        pageName: document.title
-                    }
-                })
-            });
-        } catch (error) {
-            console.error('HubSpot submission failed', error);
-        }
-    } else {
-        // Small artificial delay if skipping Hubspot so the FB event has time to fire
-        await new Promise(r => setTimeout(r, 200));
-    }
+</body>
 
-    // 3. Redirect back to standard contact page with parameters intact
-    window.location.href = 'https://flychain.us/contact?' + params.toString();
-});
-</script>  
-</body>  
 </html>
