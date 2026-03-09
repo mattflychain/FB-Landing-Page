@@ -187,6 +187,13 @@
             z-index: 2
         }
 
+        .hero-layout {
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+            gap: 44px;
+            align-items: center;
+        }
+
         @media(max-width:900px) {
             .hero-layout {
                 grid-template-columns: 1fr;
@@ -1126,11 +1133,12 @@
             width: 22px;
             height: 22px;
             border-radius: 50%;
-            background: rgba(95, 88, 255, .2);
-            color: var(--fc-violet);
-            font-size: 12px;
+            background: linear-gradient(135deg, var(--fc-grad-1), var(--fc-grad-2));
+            color: #fff;
+            font-size: 13px;
             font-weight: 700;
-            flex-shrink: 0
+            flex-shrink: 0;
+            box-shadow: 0 2px 6px rgba(95, 88, 255, 0.3);
         }
 
         /* PAIN QUESTIONS */
