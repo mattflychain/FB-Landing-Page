@@ -2180,7 +2180,7 @@
             const fbp = document.cookie.split(';').map(c => c.trim()).find(c => c.startsWith('_fbp='))?.split('=')[1] || '';
             const fbc = document.cookie.split(';').map(c => c.trim()).find(c => c.startsWith('_fbc='))?.split('=')[1] || '';
 
-            // 1. Facebook Browser Pixel — Advanced Matching & Lead Event
+            // 1. Facebook Browser Pixel — Advanced Matching & Schedule Event
             if (typeof fbq === 'function') {
                 fbq('init', '897644829617517', {
                     em: email.trim().toLowerCase(),
@@ -2188,7 +2188,7 @@
                     fn: firstName.trim().toLowerCase(),
                     ln: lastName.trim().toLowerCase()
                 });
-                fbq('track', 'Lead', {
+                fbq('track', 'Schedule', {
                     content_name: 'Quiz Form Completed',
                     content_category: specialty,
                     pain_point: pain,
@@ -2196,7 +2196,7 @@
                 }, { eventID: eventId }); // eventID for deduplication with CAPI
             }
 
-            // 1b. Facebook Conversions API (server-side) — sends same Lead event
+            // 1b. Facebook Conversions API (server-side) — sends same Schedule event
             try {
                 fetch('/api/capi-event', {
                     method: 'POST',
