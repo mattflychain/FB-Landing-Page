@@ -2195,14 +2195,8 @@
             const fbp = document.cookie.split(';').map(c => c.trim()).find(c => c.startsWith('_fbp='))?.split('=')[1] || '';
             const fbc = document.cookie.split(';').map(c => c.trim()).find(c => c.startsWith('_fbc='))?.split('=')[1] || '';
 
-            // 1. Facebook Browser Pixel — Advanced Matching & Lead Event
+            // 1. Facebook Browser Pixel — Lead Event
             if (typeof fbq === 'function') {
-                fbq('init', '897644829617517', {
-                    em: email.trim().toLowerCase(),
-                    ph: phone.replace(/\D/g, ''),
-                    fn: firstName.trim().toLowerCase(),
-                    ln: lastName.trim().toLowerCase()
-                });
                 fbq('track', 'Lead', {
                     content_name: 'Quiz Form Completed',
                     content_category: specialty,
