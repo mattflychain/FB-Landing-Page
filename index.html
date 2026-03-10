@@ -1702,6 +1702,21 @@
                                 <p class="quiz-step-label">Step 4 of 4</p>
                             </div>
                         </div>
+                        <div id="booking-container" style="display: none; width: 100%;">
+                            <h3
+                                style="font-family: var(--font-headline); font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 8px; text-align: center;">
+                                Book Your Demo</h3>
+                            <p class="form-sub" style="text-align: center;">Pick a time that works for you.</p>
+                            <iframe id="hubspot-iframe" src="" width="100%" height="700" frameborder="0"></iframe>
+                        </div>
+                        <div id="thank-you-container" style="display: none; text-align: center; padding: 40px 0;">
+                            <div style="font-size: 48px; margin-bottom: 20px;">🎉</div>
+                            <h3
+                                style="font-family: var(--font-headline); font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 8px;">
+                                Demo Confirmed!</h3>
+                            <p class="form-sub" style="margin-bottom: 0;">We look forward to speaking with you. You'll
+                                receive a calendar invitation shortly.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2180,15 +2195,15 @@
             const fbp = document.cookie.split(';').map(c => c.trim()).find(c => c.startsWith('_fbp='))?.split('=')[1] || '';
             const fbc = document.cookie.split(';').map(c => c.trim()).find(c => c.startsWith('_fbc='))?.split('=')[1] || '';
 
-            // 1. Facebook Browser Pixel — Advanced Matching & Schedule Event
+            // 1. Facebook Browser Pixel — Advanced Matching & Lead Event
             if (typeof fbq === 'function') {
                 fbq('init', '897644829617517', {
                     em: email.trim().toLowerCase(),
-                    ph: phone.replace(/\\D/g, ''),
+                    ph: phone.replace(/\D/g, ''),
                     fn: firstName.trim().toLowerCase(),
                     ln: lastName.trim().toLowerCase()
                 });
-                fbq('track', 'Schedule', {
+                fbq('track', 'Lead', {
                     content_name: 'Quiz Form Completed',
                     content_category: specialty,
                     pain_point: pain,
@@ -2196,12 +2211,13 @@
                 }, { eventID: eventId }); // eventID for deduplication with CAPI
             }
 
-            // 1b. Facebook Conversions API (server-side) — sends same Schedule event
+            // 1b. Facebook Conversions API (server-side) — sends same Lead event
             try {
                 fetch('/api/capi-event', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
+                        eventName: 'Lead',
                         email, phone, firstName, lastName,
                         specialty, pain, revenue, eventId,
                         sourceUrl: window.location.href,
@@ -2250,8 +2266,57 @@
                 await new Promise(r => setTimeout(r, 200));
             }
 
-            // 3. Redirect to HubSpot meeting booking page with parameters intact
-            window.location.href = 'https://meetings.hubspot.com/ethan-schwarzbach?uuid=1e2e9824-168e-4fd2-90a7-f281a6fd6d27&' + params.toString();
+            // 3. Show HubSpot Booking Iframe inline instead of redirecting
+            document.getElementById('quiz-container').style.display = 'none';
+
+            const iframe = document.getElementById('hubspot-iframe');
+            const iframeSrc = `https://meetings.hubspot.com/ethan-schwarzbach?embed=true&uuid=1e2e9824-168e-4fd2-90a7-f281a6fd6d27&firstname=${encodeURIComponent(firstName)}&lastname=${encodeURIComponent(lastName)}&email=${encodeURIComponent(email)}`;
+            iframe.src = iframeSrc;
+
+            document.getElementById('booking-container').style.display = 'block';
+        });
+
+        // Listen for HubSpot meeting booked event
+        window.addEventListener('message', function (event) {
+            if (event.data.meetingBookSucceeded) {
+
+                // Fire Schedule Event to Pixel
+                if (typeof fbq === 'function') {
+                    const scheduleEventId = 'schedule_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+
+                    fbq('track', 'Schedule', {
+                        content_name: 'Demo Booked'
+                    }, { eventID: scheduleEventId });
+
+                    // Fire CAPI Schedule event
+                    const fbp = document.cookie.split(';').map(c => c.trim()).find(c => c.startsWith('_fbp='))?.split('=')[1] || '';
+                    const fbc = document.cookie.split(';').map(c => c.trim()).find(c => c.startsWith('_fbc='))?.split('=')[1] || '';
+
+                    try {
+                        let specialty = document.getElementById('hf-specialty').value;
+                        let pain = document.getElementById('hf-pain').value;
+                        let revenue = document.getElementById('hf-revenue').value;
+
+                        fetch('/api/capi-event', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                eventName: 'Schedule',
+                                eventId: scheduleEventId,
+                                sourceUrl: window.location.href,
+                                specialty, pain, revenue,
+                                fbp, fbc
+                            })
+                        }).catch(err => console.error('CAPI call failed:', err));
+                    } catch (err) {
+                        console.error('CAPI call failed:', err);
+                    }
+                }
+
+                // Show Thank You message
+                document.getElementById('booking-container').style.display = 'none';
+                document.getElementById('thank-you-container').style.display = 'block';
+            }
         });
     </script>
 
