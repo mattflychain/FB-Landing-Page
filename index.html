@@ -200,6 +200,14 @@
                 gap: 32px
             }
 
+            .hero-layout>div:nth-child(1) {
+                order: 2;
+            }
+
+            .hero-layout>div:nth-child(2) {
+                order: 1;
+            }
+
             .hero {
                 padding: 80px 0 48px;
             }
@@ -1590,8 +1598,7 @@
                     <div class="hero-badge">For ABA & Healthcare Practice Owners</div>
                     <h1>QuickBooks Wasn't Built for Healthcare. <em>Flychain Is.</em></h1>
                     <p class="hero-sub" style="margin-bottom:20px;">
-                        Healthcare-specialized bookkeeping, taxes, cash flow solutions, and an AI CFO built for your
-                        practice — <strong>one platform that replaces QuickBooks, your general bookkeeper, and the
+                        <strong>One platform that replaces QuickBooks, your general bookkeeper, and the
                             spreadsheets you're managing at midnight.</strong>
                     </p>
                     <div class="hero-bullets">
@@ -2264,7 +2271,7 @@
             document.getElementById('quiz-container').style.display = 'none';
 
             const iframe = document.getElementById('hubspot-iframe');
-            const iframeSrc = `https://meetings.hubspot.com/ethan-schwarzbach?embed=true&uuid=1e2e9824-168e-4fd2-90a7-f281a6fd6d27&firstname=${encodeURIComponent(firstName)}&lastname=${encodeURIComponent(lastName)}&email=${encodeURIComponent(email)}`;
+            const iframeSrc = `https://meetings.hubspot.com/ethan-schwarzbach/meta?embed=true&uuid=822bda70-d137-4e90-9798-0628bc567aa5&firstname=${encodeURIComponent(firstName)}&lastname=${encodeURIComponent(lastName)}&email=${encodeURIComponent(email)}`;
             iframe.src = iframeSrc;
 
             document.getElementById('booking-container').style.display = 'block';
